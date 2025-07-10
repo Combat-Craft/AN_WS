@@ -1,0 +1,72 @@
+running egg_info
+creating ../../build/navigation/navigation.egg-info
+writing ../../build/navigation/navigation.egg-info/PKG-INFO
+writing dependency_links to ../../build/navigation/navigation.egg-info/dependency_links.txt
+writing entry points to ../../build/navigation/navigation.egg-info/entry_points.txt
+writing requirements to ../../build/navigation/navigation.egg-info/requires.txt
+writing top-level names to ../../build/navigation/navigation.egg-info/top_level.txt
+writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+reading manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/tasc/AN_WS/build/navigation/build
+creating /home/tasc/AN_WS/build/navigation/build/lib
+creating /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/gps_display_old.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/gps_display.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/gps_node.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/multi_camera_publisher.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/aruco_marker_publisher.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/multi_camera_publisher_previous.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/camera_publisher.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/__init__.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/combined_gps_aruco_node.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/multi_camera_publisher_old.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+copying navigation/camera_subscriber.py -> /home/tasc/AN_WS/build/navigation/build/lib/navigation
+running install
+running install_lib
+creating /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/gps_display_old.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/gps_display.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/gps_node.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/multi_camera_publisher.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/aruco_marker_publisher.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/multi_camera_publisher_previous.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/camera_publisher.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/__init__.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/combined_gps_aruco_node.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/multi_camera_publisher_old.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+copying /home/tasc/AN_WS/build/navigation/build/lib/navigation/camera_subscriber.py -> /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/gps_display_old.py to gps_display_old.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/gps_display.py to gps_display.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/gps_node.py to gps_node.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/multi_camera_publisher.py to multi_camera_publisher.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/aruco_marker_publisher.py to aruco_marker_publisher.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/multi_camera_publisher_previous.py to multi_camera_publisher_previous.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/camera_publisher.py to camera_publisher.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/combined_gps_aruco_node.py to combined_gps_aruco_node.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/multi_camera_publisher_old.py to multi_camera_publisher_old.cpython-310.pyc
+byte-compiling /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/camera_subscriber.py to camera_subscriber.cpython-310.pyc
+running install_data
+creating /home/tasc/AN_WS/install/navigation/share/ament_index
+creating /home/tasc/AN_WS/install/navigation/share/ament_index/resource_index
+creating /home/tasc/AN_WS/install/navigation/share/ament_index/resource_index/packages
+copying resource/navigation -> /home/tasc/AN_WS/install/navigation/share/ament_index/resource_index/packages
+copying package.xml -> /home/tasc/AN_WS/install/navigation/share/navigation
+creating /home/tasc/AN_WS/install/navigation/share/navigation/launch
+copying launch/multi_cameras.launch.py -> /home/tasc/AN_WS/install/navigation/share/navigation/launch
+copying launch/gps_cameras.launch.py -> /home/tasc/AN_WS/install/navigation/share/navigation/launch
+running install_egg_info
+Copying ../../build/navigation/navigation.egg-info to /home/tasc/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info
+running install_scripts
+Installing aruco_marker_publisher script to /home/tasc/AN_WS/install/navigation/lib/navigation
+Installing camera_publisher script to /home/tasc/AN_WS/install/navigation/lib/navigation
+Installing camera_subscriber script to /home/tasc/AN_WS/install/navigation/lib/navigation
+Installing combined_gps_aruco script to /home/tasc/AN_WS/install/navigation/lib/navigation
+Installing gps_display script to /home/tasc/AN_WS/install/navigation/lib/navigation
+Installing gps_node script to /home/tasc/AN_WS/install/navigation/lib/navigation
+Installing multi_camera_publisher script to /home/tasc/AN_WS/install/navigation/lib/navigation
+writing list of installed files to '/home/tasc/AN_WS/build/navigation/install.log'

@@ -1,0 +1,3 @@
+[console_scripts]
+gps_node = nova_sensors.gps_node:mainimu_node = nova_sensors.imu_node:main
+
