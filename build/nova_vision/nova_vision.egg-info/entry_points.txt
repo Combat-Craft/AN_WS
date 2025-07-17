@@ -1,0 +1,10 @@
+[console_scripts]
+aruco_detect = nova_vision.aruco_detect:main
+camera_publisher = nova_vision.camera_publisher:main
+camera_subscriber = nova_vision.camera_subscriber:main
+gps_aruco = nova_vision.gps_aruco:main
+gps_display = nova_vision.gps_display:main
+gps_node = nova_vision.gps_node:main
+multi_camera_publisher = nova_vision.multi_camera_publisher:main
+object_tracker = nova_vision.object_tracker:main
+

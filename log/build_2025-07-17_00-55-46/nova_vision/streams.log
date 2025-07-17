@@ -1,0 +1,75 @@
+[3.147s] Invoking command in '/home/tasc/AN_WS-1/nova_vision': PYTHONPATH=/home/tasc/AN_WS-1/build/nova_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_vision build --build-base /home/tasc/AN_WS-1/build/nova_vision/build install --record /home/tasc/AN_WS-1/build/nova_vision/install.log --single-version-externally-managed install_data
+[3.680s] running egg_info
+[3.682s] creating ../build/nova_vision/nova_vision.egg-info
+[3.683s] writing ../build/nova_vision/nova_vision.egg-info/PKG-INFO
+[3.684s] writing dependency_links to ../build/nova_vision/nova_vision.egg-info/dependency_links.txt
+[3.684s] writing entry points to ../build/nova_vision/nova_vision.egg-info/entry_points.txt
+[3.685s] writing requirements to ../build/nova_vision/nova_vision.egg-info/requires.txt
+[3.686s] writing top-level names to ../build/nova_vision/nova_vision.egg-info/top_level.txt
+[3.686s] writing manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'
+[3.689s] reading manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'
+[3.689s] adding license file 'LICENSE'
+[3.690s] writing manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'
+[3.691s] running build
+[3.692s] running build_py
+[3.694s] creating /home/tasc/AN_WS-1/build/nova_vision/build
+[3.694s] creating /home/tasc/AN_WS-1/build/nova_vision/build/lib
+[3.694s] creating /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.695s] copying nova_vision/gps_aruco.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.696s] copying nova_vision/gps_display.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.697s] copying nova_vision/gps_node.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.697s] copying nova_vision/multi_camera_publisher.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.697s] copying nova_vision/line_follower.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.698s] copying nova_vision/object_tracker.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.698s] copying nova_vision/aruco_detect.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.699s] copying nova_vision/camera_publisher.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.700s] copying nova_vision/__init__.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.700s] copying nova_vision/advanced_line_follower.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.701s] copying nova_vision/camera_subscriber.py -> /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision
+[3.704s] running install
+[3.704s] running install_lib
+[3.705s] creating /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.705s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/gps_aruco.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.705s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/gps_display.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.705s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/gps_node.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.705s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/multi_camera_publisher.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.706s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/line_follower.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.706s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/object_tracker.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.707s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/aruco_detect.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.707s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/camera_publisher.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.708s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/__init__.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.709s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/advanced_line_follower.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.709s] copying /home/tasc/AN_WS-1/build/nova_vision/build/lib/nova_vision/camera_subscriber.py -> /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision
+[3.711s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/gps_aruco.py to gps_aruco.cpython-310.pyc
+[3.713s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/gps_display.py to gps_display.cpython-310.pyc
+[3.713s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/gps_node.py to gps_node.cpython-310.pyc
+[3.714s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/multi_camera_publisher.py to multi_camera_publisher.cpython-310.pyc
+[3.714s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/line_follower.py to line_follower.cpython-310.pyc
+[3.715s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/object_tracker.py to object_tracker.cpython-310.pyc
+[3.716s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/aruco_detect.py to aruco_detect.cpython-310.pyc
+[3.716s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/camera_publisher.py to camera_publisher.cpython-310.pyc
+[3.724s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/__init__.py to __init__.cpython-310.pyc
+[3.724s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/advanced_line_follower.py to advanced_line_follower.cpython-310.pyc
+[3.724s] byte-compiling /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision/camera_subscriber.py to camera_subscriber.cpython-310.pyc
+[3.725s] running install_data
+[3.725s] creating /home/tasc/AN_WS-1/install/nova_vision/share/ament_index
+[3.725s] creating /home/tasc/AN_WS-1/install/nova_vision/share/ament_index/resource_index
+[3.725s] creating /home/tasc/AN_WS-1/install/nova_vision/share/ament_index/resource_index/packages
+[3.725s] copying resource/nova_vision -> /home/tasc/AN_WS-1/install/nova_vision/share/ament_index/resource_index/packages
+[3.725s] copying package.xml -> /home/tasc/AN_WS-1/install/nova_vision/share/nova_vision
+[3.725s] creating /home/tasc/AN_WS-1/install/nova_vision/share/nova_vision/launch
+[3.726s] copying launch/dual_cameras.launch.py -> /home/tasc/AN_WS-1/install/nova_vision/share/nova_vision/launch
+[3.726s] copying launch/gps_cameras.launch.py -> /home/tasc/AN_WS-1/install/nova_vision/share/nova_vision/launch
+[3.726s] running install_egg_info
+[3.730s] Copying ../build/nova_vision/nova_vision.egg-info to /home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages/nova_vision-0.0.0-py3.10.egg-info
+[3.733s] running install_scripts
+[3.784s] Installing aruco_detect script to /home/tasc/AN_WS-1/install/nova_vision/lib/nova_vision
+[3.785s] Installing camera_publisher script to /home/tasc/AN_WS-1/install/nova_vision/lib/nova_vision
+[3.786s] Installing camera_subscriber script to /home/tasc/AN_WS-1/install/nova_vision/lib/nova_vision
+[3.786s] Installing gps_aruco script to /home/tasc/AN_WS-1/install/nova_vision/lib/nova_vision
+[3.787s] Installing gps_display script to /home/tasc/AN_WS-1/install/nova_vision/lib/nova_vision
+[3.787s] Installing gps_node script to /home/tasc/AN_WS-1/install/nova_vision/lib/nova_vision
+[3.788s] Installing multi_camera_publisher script to /home/tasc/AN_WS-1/install/nova_vision/lib/nova_vision
+[3.788s] Installing object_tracker script to /home/tasc/AN_WS-1/install/nova_vision/lib/nova_vision
+[3.788s] writing list of installed files to '/home/tasc/AN_WS-1/build/nova_vision/install.log'
+[3.925s] Invoked command in '/home/tasc/AN_WS-1/nova_vision' returned '0': PYTHONPATH=/home/tasc/AN_WS-1/build/nova_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tasc/AN_WS-1/install/nova_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_vision build --build-base /home/tasc/AN_WS-1/build/nova_vision/build install --record /home/tasc/AN_WS-1/build/nova_vision/install.log --single-version-externally-managed install_data
