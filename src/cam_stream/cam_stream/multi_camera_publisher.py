@@ -28,7 +28,7 @@ class MultiCameraPublisher(Node):
             self.setup_pipeline(cam_id, config['device'])
             
 
-        self.get_logger().info('Start')
+        self.get_logger().info('Starting')
 
     def setup_pipeline(self, cam_id, device):
 
