@@ -31,18 +31,11 @@ class MultiCameraPublisher(Node):
         self.get_logger().info('Start')
 
     def setup_pipeline(self, cam_id, device):
-        # Per-camera settings
-        if cam_id == 1: #Change per IR Camera 
-            resolution = "320x240"
-            framerate = "5/1"
-        else:
-            resolution = "352x288"
-            framerate = "25/1"
 
         pipeline_str = (
-            f"v4l2src device={device} do-timestamp=true ! "
-            f"image/jpeg,width={resolution.split('x')[0]},height={resolution.split('x')[1]},framerate={framerate} ! "
-            "queue max-size-buffers=1 ! jpegparse ! appsink name=sink emit-signals=True"
+            f"v4l2src device={device} ! "
+            f"image/jpeg,width=640,height=480,framerate=30/1 ! "
+            "jpegparse ! appsink name=sink emit-signals=True"
         )
         self.get_logger().info(f"Starting pipeline for cam {cam_id} ({device})")
         pipeline = Gst.parse_launch(pipeline_str)
