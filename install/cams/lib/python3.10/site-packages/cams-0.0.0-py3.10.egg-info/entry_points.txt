@@ -1,0 +1,4 @@
+[console_scripts]
+multi_camera_publisher = lockin.multi_camera_publisher:main
+multi_camera_subscriber = lockin.multi_camera_subscriber:main
+

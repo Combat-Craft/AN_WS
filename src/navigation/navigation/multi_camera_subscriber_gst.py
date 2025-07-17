@@ -26,8 +26,8 @@ class Multi_Camera_Subscriber_Gst(Node):
     
     def image_callback(self, msg):
         self.get_logger().info("I am Crashing out")
-        frame = self.bridge.compressedimgmsg_to_cv2(msg, "bgr8")
-        cv2.imshow(self.window_name, cv_image)
+        frame = self.bridge.compressed_imgmsg_to_cv2(msg, "bgr8")
+        cv2.imshow(self.window_name, frame)
         cv2.waitKey(1)
 
 

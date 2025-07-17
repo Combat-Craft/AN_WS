@@ -1,0 +1,42 @@
+[3.175s] Invoking command in '/home/tasc/AN_WS/src/cams': PYTHONPATH=/home/tasc/AN_WS/build/cams/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tasc/AN_WS/install/cams/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cams build --build-base /home/tasc/AN_WS/build/cams/build install --record /home/tasc/AN_WS/build/cams/install.log --single-version-externally-managed install_data
+[3.723s] running egg_info
+[3.727s] creating ../../build/cams/cams.egg-info
+[3.727s] writing ../../build/cams/cams.egg-info/PKG-INFO
+[3.728s] writing dependency_links to ../../build/cams/cams.egg-info/dependency_links.txt
+[3.728s] writing entry points to ../../build/cams/cams.egg-info/entry_points.txt
+[3.728s] writing requirements to ../../build/cams/cams.egg-info/requires.txt
+[3.728s] writing top-level names to ../../build/cams/cams.egg-info/top_level.txt
+[3.728s] writing manifest file '../../build/cams/cams.egg-info/SOURCES.txt'
+[3.733s] reading manifest file '../../build/cams/cams.egg-info/SOURCES.txt'
+[3.733s] adding license file 'LICENSE'
+[3.735s] writing manifest file '../../build/cams/cams.egg-info/SOURCES.txt'
+[3.735s] running build
+[3.735s] running build_py
+[3.736s] creating /home/tasc/AN_WS/build/cams/build
+[3.736s] creating /home/tasc/AN_WS/build/cams/build/lib
+[3.736s] creating /home/tasc/AN_WS/build/cams/build/lib/cams
+[3.736s] copying cams/multi_camera_publisher.py -> /home/tasc/AN_WS/build/cams/build/lib/cams
+[3.741s] copying cams/__init__.py -> /home/tasc/AN_WS/build/cams/build/lib/cams
+[3.741s] copying cams/multi_camera_subscriber.py -> /home/tasc/AN_WS/build/cams/build/lib/cams
+[3.741s] running install
+[3.741s] running install_lib
+[3.742s] creating /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams
+[3.742s] copying /home/tasc/AN_WS/build/cams/build/lib/cams/multi_camera_publisher.py -> /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams
+[3.743s] copying /home/tasc/AN_WS/build/cams/build/lib/cams/__init__.py -> /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams
+[3.743s] copying /home/tasc/AN_WS/build/cams/build/lib/cams/multi_camera_subscriber.py -> /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams
+[3.743s] byte-compiling /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams/multi_camera_publisher.py to multi_camera_publisher.cpython-310.pyc
+[3.751s] byte-compiling /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams/__init__.py to __init__.cpython-310.pyc
+[3.752s] byte-compiling /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams/multi_camera_subscriber.py to multi_camera_subscriber.cpython-310.pyc
+[3.752s] running install_data
+[3.752s] creating /home/tasc/AN_WS/install/cams/share/ament_index
+[3.752s] creating /home/tasc/AN_WS/install/cams/share/ament_index/resource_index
+[3.753s] creating /home/tasc/AN_WS/install/cams/share/ament_index/resource_index/packages
+[3.753s] copying resource/cams -> /home/tasc/AN_WS/install/cams/share/ament_index/resource_index/packages
+[3.753s] copying package.xml -> /home/tasc/AN_WS/install/cams/share/cams
+[3.753s] running install_egg_info
+[3.754s] Copying ../../build/cams/cams.egg-info to /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams-0.0.0-py3.10.egg-info
+[3.754s] running install_scripts
+[3.804s] Installing multi_camera_publisher script to /home/tasc/AN_WS/install/cams/lib/cams
+[3.804s] Installing multi_camera_subscriber script to /home/tasc/AN_WS/install/cams/lib/cams
+[3.805s] writing list of installed files to '/home/tasc/AN_WS/build/cams/install.log'
+[3.908s] Invoked command in '/home/tasc/AN_WS/src/cams' returned '0': PYTHONPATH=/home/tasc/AN_WS/build/cams/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tasc/AN_WS/install/cams/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cams build --build-base /home/tasc/AN_WS/build/cams/build install --record /home/tasc/AN_WS/build/cams/install.log --single-version-externally-managed install_data

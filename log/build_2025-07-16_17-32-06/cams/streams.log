@@ -1,0 +1,23 @@
+[3.255s] Invoking command in '/home/tasc/AN_WS/src/cams': PYTHONPATH=/home/tasc/AN_WS/build/cams/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tasc/AN_WS/install/cams/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cams build --build-base /home/tasc/AN_WS/build/cams/build install --record /home/tasc/AN_WS/build/cams/install.log --single-version-externally-managed install_data
+[3.801s] running egg_info
+[3.802s] writing ../../build/cams/cams.egg-info/PKG-INFO
+[3.802s] writing dependency_links to ../../build/cams/cams.egg-info/dependency_links.txt
+[3.803s] writing entry points to ../../build/cams/cams.egg-info/entry_points.txt
+[3.803s] writing requirements to ../../build/cams/cams.egg-info/requires.txt
+[3.803s] writing top-level names to ../../build/cams/cams.egg-info/top_level.txt
+[3.807s] reading manifest file '../../build/cams/cams.egg-info/SOURCES.txt'
+[3.808s] adding license file 'LICENSE'
+[3.810s] writing manifest file '../../build/cams/cams.egg-info/SOURCES.txt'
+[3.810s] running build
+[3.810s] running build_py
+[3.810s] running install
+[3.811s] running install_lib
+[3.814s] running install_data
+[3.814s] running install_egg_info
+[3.819s] removing '/home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams-0.0.0-py3.10.egg-info' (and everything under it)
+[3.820s] Copying ../../build/cams/cams.egg-info to /home/tasc/AN_WS/install/cams/lib/python3.10/site-packages/cams-0.0.0-py3.10.egg-info
+[3.823s] running install_scripts
+[3.872s] Installing multi_camera_publisher script to /home/tasc/AN_WS/install/cams/lib/cams
+[3.872s] Installing multi_camera_subscriber script to /home/tasc/AN_WS/install/cams/lib/cams
+[3.873s] writing list of installed files to '/home/tasc/AN_WS/build/cams/install.log'
+[3.962s] Invoked command in '/home/tasc/AN_WS/src/cams' returned '0': PYTHONPATH=/home/tasc/AN_WS/build/cams/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tasc/AN_WS/install/cams/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cams build --build-base /home/tasc/AN_WS/build/cams/build install --record /home/tasc/AN_WS/build/cams/install.log --single-version-externally-managed install_data

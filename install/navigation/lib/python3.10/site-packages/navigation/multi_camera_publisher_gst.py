@@ -7,6 +7,7 @@ import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst, GLib
 import threading
+import signal
 
 class Multi_Camera_Publisher_Gst(Node):
     def __init__(self):
@@ -22,7 +23,7 @@ class Multi_Camera_Publisher_Gst(Node):
     def setup_pipeline(self):
         # Simplified single-camera pipeline with JPEG compression
         pipeline_str = (
-        "v4l2src device=/dev/video2 ! video/x-raw,width=640,height=480,framerate=30/1 ! videoconvert ! "
+        "v4l2src device=/dev/video0 ! video/x-raw,width=640,height=480,framerate=30/1 ! videoconvert ! "
         "nvjpegenc ! appsink name=sink emit-signals=True"
         )
         self.get_logger().info("bruhski2")
@@ -60,6 +61,13 @@ def main(args=None):
     loop = GLib.MainLoop()
     spin_thread = threading.Thread(target=rclpy.spin, args=(node,))
     spin_thread.start()
+    
+    def shutdown_handler(signum, frame):
+    	print("shut yo ahhh")
+    	loop.quit()
+    	
+    signal.signal(signal.SIGINT, shutdown_handler)
+    signal.signal(signal.SIGTERM, shutdown_handler)
     
     try:
         loop.run()
