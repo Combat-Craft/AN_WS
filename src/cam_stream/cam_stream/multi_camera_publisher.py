@@ -17,7 +17,7 @@ class MultiCameraPublisher(Node):
         self.cameras = {
             0: {'device': '/dev/video0', 'topic': '/cam0/compressed'},
             1: {'device': '/dev/video2', 'topic': '/cam1/compressed'},
-            2: {'device': '/dev/video4', 'topic': '/cam2/compressed'},
+            #2: {'device': '/dev/video4', 'topic': '/cam2/compressed'},
         }
 
         self.camera_publishers = {}  # Changed from publishers to camera_publishers
