@@ -8,15 +8,14 @@ import numpy as np
 
 class MultiCameraH264Subscriber(Node):
     def __init__(self):
-        super().__init__('multi_camera_h264_subscriber')
+        super().__init__('multi_camera_subscriber')
+        self.bridge = CvBridge()
+        self.frames = {0: None, 1: None, 2: None}#
 
-        self.frames = {0: None, 1: None} # Add more if needed: ,2: None
-        self.get_logger().info('Starting Multi H264 Subscriber')
-
-        self.create_subscription(CompressedImage, '/cam0/h264', lambda msg: self.callback(msg, 0), 10)
-        self.create_subscription(CompressedImage, '/cam1/h264', lambda msg: self.callback(msg, 1), 10)
-        # self.create_subscription(CompressedImage, '/cam2/h264', lambda msg: self.callback(msg, 2), 10)
-
+        self.create_subscription(CompressedImage, '/cam0/compressed', lambda msg: self.callback(msg, 0), 10)
+        self.create_subscription(CompressedImage, '/cam1/compressed', lambda msg: self.callback(msg, 1), 10)
+        self.create_subscription(CompressedImage, '/cam2/compressed', lambda msg: self.callback(msg, 2), 10)
+        self.get_logger().info('trying')
         self.timer = self.create_timer(0.05, self.display_frames)  # 20 Hz
 
     def callback(self, msg, cam_id):
@@ -31,12 +30,14 @@ class MultiCameraH264Subscriber(Node):
             self.get_logger().warn(f"Exception decoding cam {cam_id}: {e}")
 
     def display_frames(self):
-        valid_frames = [f for f in self.frames.values() if f is not None]
-        if len(valid_frames) >= 2:
-            combined = np.hstack(valid_frames)
-            cv2.imshow('Multi H264 Feeds', combined)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                rclpy.shutdown()
+        # Check if all frames are not None
+        if all(frame is not None for frame in self.frames.values()):
+            try:
+                combined = np.hstack([self.frames[0], self.frames[1], self.frames[2]])# Testing for 2
+                cv2.imshow("Three Camera Feeds", combined)
+                cv2.waitKey(1)
+            except Exception as e:
+                self.get_logger().warn(f'Error displaying frames: {e}')
         else:
             self.get_logger().info("Waiting for frames...")
 
