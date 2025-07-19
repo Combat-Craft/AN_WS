@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import CompressedImage
@@ -10,42 +8,39 @@ gi.require_version('Gst', '1.0')
 from gi.repository import Gst
 import threading
 
-class MultiCameraH264Subscriber(Node):
+
+class MultiCameraSubscriber(Node):
     def __init__(self):
         super().__init__('multi_camera_subscriber')
-<<<<<<< HEAD
         Gst.init(None)
+
 
         # Define camera topics
         self.cameras = {
             0: '/cam0/h264',
-            1: '/cam1/h264'
+            1: '/cam1/h264',
+            2: '/cam2/h264',
         }
-=======
-        self.bridge = CvBridge()
-        self.frames = {0: None, 1: None, 2: None}#
 
-        self.create_subscription(CompressedImage, '/cam0/compressed', lambda msg: self.callback(msg, 0), 10)
-        self.create_subscription(CompressedImage, '/cam1/compressed', lambda msg: self.callback(msg, 1), 10)
-        self.create_subscription(CompressedImage, '/cam2/compressed', lambda msg: self.callback(msg, 2), 10)
-        self.get_logger().info('trying')
-        self.timer = self.create_timer(0.05, self.display_frames)  # 20 Hz
->>>>>>> refs/remotes/origin/main
 
         self.pipelines = {}
         self.appsrcs = {}
         self.appsinks = {}
-        self.frames = {0: None, 1: None}
+        self.frames = {0: None, 1: None, 2: None}
+
 
         for cam_id, topic in self.cameras.items():
             self.setup_pipeline(cam_id)
             self.create_subscription(CompressedImage, topic, lambda msg, cid=cam_id: self.image_callback(msg, cid), 10)
 
+
         # OpenCV display loop in background
         self.display_thread = threading.Thread(target=self.display_loop, daemon=True)
         self.display_thread.start()
 
+
         self.get_logger().info('Multi-camera H264 subscriber started.')
+
 
     def setup_pipeline(self, cam_id):
         decoder = "nvh264dec ! videoconvert" if self.has_cuda() else "avdec_h264 ! videoconvert"
@@ -59,37 +54,31 @@ class MultiCameraH264Subscriber(Node):
         appsrc = pipeline.get_by_name(f"mysrc_{cam_id}")
         appsink = pipeline.get_by_name(f"mysink_{cam_id}")
 
+
         pipeline.set_state(Gst.State.PLAYING)
+
 
         self.pipelines[cam_id] = pipeline
         self.appsrcs[cam_id] = appsrc
         self.appsinks[cam_id] = appsink
         self.get_logger().info(f"Pipeline started for camera {cam_id}")
 
+
     def has_cuda(self):
         return bool(Gst.Registry.get().find_plugin("nvh264dec"))
 
+
     def image_callback(self, msg, cam_id):
         try:
-<<<<<<< HEAD
-            np_arr = np.frombuffer(msg.data, np.uint8)
-            frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-            if frame is not None:
-                self.frames[cam_id] = cv2.resize(frame, (320, 240))
-            else:
-                self.get_logger().warn(f"Failed to decode H264 frame for cam {cam_id}")
-        except Exception as e:
-            self.get_logger().warn(f"Exception decoding cam {cam_id}: {e}")
-=======
             buf = Gst.Buffer.new_allocate(None, len(msg.data), None)
             buf.fill(0, msg.data)
             timestamp = msg.header.stamp.sec * Gst.SECOND + msg.header.stamp.nanosec
             buf.pts = timestamp
             buf.dts = timestamp
->>>>>>> refs/remotes/origin/main
 
-<<<<<<< HEAD
+
             self.appsrcs[cam_id].emit("push-buffer", buf)
+
 
             sample = self.appsinks[cam_id].emit("try-pull-sample", 10000000)  # 10ms timeout
             if sample:
@@ -105,8 +94,11 @@ class MultiCameraH264Subscriber(Node):
         except Exception as e:
             self.get_logger().error(f"Cam{cam_id} decode error: {e}")
 
+
     def display_loop(self):
+        frame_counter=0
         while rclpy.ok():
+            frame_counter +=1
             if all(frame is not None for frame in self.frames.values()):
                 try:
                     resized = [cv2.resize(self.frames[cid], (320, 240)) for cid in self.cameras.keys()]
@@ -117,40 +109,21 @@ class MultiCameraH264Subscriber(Node):
                 except Exception as e:
                     self.get_logger().warn(f"Display error: {e}")
             else:
-                # print("Waiting for frames...")
+                if frame_counter%100000==0: print(f"Waiting for frames...{frame_counter} ")
                 pass
         cv2.destroyAllWindows()
+
 
     def destroy_node(self):
         for pipeline in self.pipelines.values():
             pipeline.set_state(Gst.State.NULL)
         cv2.destroyAllWindows()
         super().destroy_node()
-=======
-    def display_frames(self):
-        # Check if all frames are not None
-        if all(frame is not None for frame in self.frames.values()):
-            try:
-                combined = np.hstack([self.frames[0], self.frames[1], self.frames[2]])# Testing for 2
-                cv2.imshow("Three Camera Feeds", combined)
-                cv2.waitKey(1)
-            except Exception as e:
-                self.get_logger().warn(f'Error displaying frames: {e}')
-        else:
-<<<<<<< HEAD
-            self.get_logger().info("Waiting for frames...")
 
-    def destroy_node(self):
-        cv2.destroyAllWindows()
-        super().destroy_node()
-=======
-            self.get_logger().info('Waiting for all camera frames...')
->>>>>>> refs/remotes/origin/main
->>>>>>> refs/remotes/origin/main
 
 def main(args=None):
     rclpy.init(args=args)
-    node = MultiCameraH264Subscriber()
+    node = MultiCameraSubscriber()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
@@ -159,5 +132,8 @@ def main(args=None):
         node.destroy_node()
         rclpy.shutdown()
 
+
 if __name__ == '__main__':
     main()
+
+

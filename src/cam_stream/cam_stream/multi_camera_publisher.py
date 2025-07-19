@@ -16,16 +16,17 @@ class MultiCameraPublisher(Node):
         self.cameras = {
             0: {'device': '/dev/video0', 'topic': '/cam0/h264'},
             1: {'device': '/dev/video2', 'topic': '/cam1/h264'},
+            2: {'device': '/dev/video4', 'topic': '/cam2/h264'}
         }
-
         for cam_id, config in self.cameras.items():
             self.camera_publishers[cam_id] = self.create_publisher(CompressedImage, config['topic'], 10)
             self.setup_pipeline(cam_id, config['device'])
+ 
 
     def setup_pipeline(self, cam_id, device):
         pipeline_str = (
             f"v4l2src device={device} ! "
-            "video/x-raw,width=640,height=480,framerate=15/1 ! "
+            "video/x-raw,width=640,height=480,framerate=30/1 ! "
             "videoconvert ! x264enc tune=zerolatency bitrate=500 speed-preset=ultrafast ! "
             "video/x-h264,stream-format=byte-stream ! "
             "appsink name=sink emit-signals=True sync=false max-buffers=1 drop=true"
@@ -46,6 +47,7 @@ class MultiCameraPublisher(Node):
 
         buf = sample.get_buffer()
         success, map_info = buf.map(Gst.MapFlags.READ)
+        self.get_logger().info(f"Got frame from cam {cam_id}")
         if success:
             msg = CompressedImage()
             msg.header.stamp = self.get_clock().now().to_msg()
