@@ -11,7 +11,17 @@ class MultiCameraPublisher(Node):
         super().__init__('multi_camera_publisher')
         Gst.init(None)
 
+<<<<<<< HEAD
         self.camera_publishers = {}
+=======
+        self.cameras = {
+            0: {'device': '/dev/video0', 'topic': '/cam0/compressed'},
+            1: {'device': '/dev/video2', 'topic': '/cam1/compressed'},
+            #2: {'device': '/dev/video4', 'topic': '/cam2/compressed'},
+        }
+
+        self.camera_publishers = {}  # Changed from publishers to camera_publishers
+>>>>>>> refs/remotes/origin/main
         self.pipelines = {}
         self.cameras = {
             0: {'device': 'videotestsrc pattern=ball', 'topic': '/cam0/h264'},
@@ -21,6 +31,12 @@ class MultiCameraPublisher(Node):
         for cam_id, config in self.cameras.items():
             self.camera_publishers[cam_id] = self.create_publisher(CompressedImage, config['topic'], 10)
             self.setup_pipeline(cam_id, config['device'])
+<<<<<<< HEAD
+=======
+            
+
+        self.get_logger().info('Starting')
+>>>>>>> refs/remotes/origin/main
 
     def setup_pipeline(self, cam_id, device):
         pipeline_str = (
@@ -71,3 +87,10 @@ def main(args=None):
         node.shutdown()
         node.destroy_node()
         rclpy.shutdown()
+<<<<<<< HEAD
+=======
+        thread.join()
+
+if __name__ == '__main__':
+    main()
+>>>>>>> refs/remotes/origin/main

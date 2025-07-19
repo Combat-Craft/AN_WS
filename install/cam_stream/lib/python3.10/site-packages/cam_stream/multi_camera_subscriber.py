@@ -11,6 +11,7 @@ import threading
 class MultiCameraSubscriber(Node):
     def __init__(self):
         super().__init__('multi_camera_subscriber')
+<<<<<<< HEAD
         Gst.init(None)
 
         # Define camera topics
@@ -18,6 +19,16 @@ class MultiCameraSubscriber(Node):
             0: '/cam0/h264',
             1: '/cam1/h264'
         }
+=======
+        self.bridge = CvBridge()
+        self.frames = {0: None, 1: None}#, 2: None
+
+        self.create_subscription(CompressedImage, '/cam0/compressed', lambda msg: self.callback(msg, 0), 10)
+        self.create_subscription(CompressedImage, '/cam1/compressed', lambda msg: self.callback(msg, 1), 10)
+        #self.create_subscription(CompressedImage, '/cam2/compressed', lambda msg: self.callback(msg, 2), 10)
+        self.get_logger().info('trying')
+        self.timer = self.create_timer(0.05, self.display_frames)  # 20 Hz
+>>>>>>> refs/remotes/origin/main
 
         self.pipelines = {}
         self.appsrcs = {}
@@ -64,6 +75,7 @@ class MultiCameraSubscriber(Node):
             buf.pts = timestamp
             buf.dts = timestamp
 
+<<<<<<< HEAD
             self.appsrcs[cam_id].emit("push-buffer", buf)
 
             sample = self.appsinks[cam_id].emit("try-pull-sample", 10000000)  # 10ms timeout
@@ -101,6 +113,19 @@ class MultiCameraSubscriber(Node):
             pipeline.set_state(Gst.State.NULL)
         cv2.destroyAllWindows()
         super().destroy_node()
+=======
+    def display_frames(self):
+        # Check if all frames are not None
+        if all(frame is not None for frame in self.frames.values()):
+            try:
+                combined = np.hstack([self.frames[0], self.frames[1]])# Testing for 2: , self.frames[2]
+                cv2.imshow("Three Camera Feeds", combined)
+                cv2.waitKey(1)
+            except Exception as e:
+                self.get_logger().warn(f'Error displaying frames: {e}')
+        else:
+            self.get_logger().info('Waiting for all camera frames...')
+>>>>>>> refs/remotes/origin/main
 
 def main(args=None):
     rclpy.init(args=args)
