@@ -1,0 +1,5 @@
+  File "/home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_subscriber.py", line 16
+    <<<<<<< HEAD
+    ^^
+SyntaxError: invalid syntax
+

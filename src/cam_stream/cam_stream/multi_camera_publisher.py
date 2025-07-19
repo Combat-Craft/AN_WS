@@ -14,8 +14,8 @@ class MultiCameraPublisher(Node):
         self.camera_publishers = {}
         self.pipelines = {}
         self.cameras = {
-            0: {'device': 'videotestsrc pattern=ball', 'topic': '/cam0/h264'},
-            1: {'device': 'videotestsrc pattern=pinwheel', 'topic': '/cam1/h264'},
+            0: {'device': '/dev/video0', 'topic': '/cam0/h264'},
+            1: {'device': '/dev/video2', 'topic': '/cam1/h264'},
         }
 
         for cam_id, config in self.cameras.items():
@@ -24,7 +24,7 @@ class MultiCameraPublisher(Node):
 
     def setup_pipeline(self, cam_id, device):
         pipeline_str = (
-            f"{device} ! "
+            f"v4l2src device={device} ! "
             "video/x-raw,width=640,height=480,framerate=15/1 ! "
             "videoconvert ! x264enc tune=zerolatency bitrate=500 speed-preset=ultrafast ! "
             "video/x-h264,stream-format=byte-stream ! "
