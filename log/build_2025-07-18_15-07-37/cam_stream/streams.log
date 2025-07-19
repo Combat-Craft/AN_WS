@@ -1,0 +1,28 @@
+[2.731s] Invoking command in '/home/moon/AN_WS/src/cam_stream': PYTHONPATH=/home/moon/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/moon/AN_WS/build/cam_stream/build install --record /home/moon/AN_WS/build/cam_stream/install.log --single-version-externally-managed install_data
+[3.374s] running egg_info
+[3.382s] writing ../../build/cam_stream/cam_stream.egg-info/PKG-INFO
+[3.382s] writing dependency_links to ../../build/cam_stream/cam_stream.egg-info/dependency_links.txt
+[3.383s] writing entry points to ../../build/cam_stream/cam_stream.egg-info/entry_points.txt
+[3.383s] writing requirements to ../../build/cam_stream/cam_stream.egg-info/requires.txt
+[3.383s] writing top-level names to ../../build/cam_stream/cam_stream.egg-info/top_level.txt
+[3.399s] reading manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[3.399s] writing manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[3.401s] running build
+[3.401s] running build_py
+[3.402s] copying cam_stream/multi_camera_publisher.py -> /home/moon/AN_WS/build/cam_stream/build/lib/cam_stream
+[3.409s] copying cam_stream/multi_camera_subscriber.py -> /home/moon/AN_WS/build/cam_stream/build/lib/cam_stream
+[3.410s] running install
+[3.410s] running install_lib
+[3.410s] copying /home/moon/AN_WS/build/cam_stream/build/lib/cam_stream/multi_camera_publisher.py -> /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[3.412s] copying /home/moon/AN_WS/build/cam_stream/build/lib/cam_stream/multi_camera_subscriber.py -> /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[3.412s] byte-compiling /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_publisher.py to multi_camera_publisher.cpython-310.pyc
+[3.413s] byte-compiling /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_subscriber.py to multi_camera_subscriber.cpython-310.pyc
+[3.419s] running install_data
+[3.419s] running install_egg_info
+[3.424s] removing '/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info' (and everything under it)
+[3.428s] Copying ../../build/cam_stream/cam_stream.egg-info to /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info
+[3.432s] running install_scripts
+[3.465s] Installing multi_camera_publisher script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream
+[3.471s] Installing multi_camera_subscriber script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream
+[3.477s] writing list of installed files to '/home/moon/AN_WS/build/cam_stream/install.log'
+[3.509s] Invoked command in '/home/moon/AN_WS/src/cam_stream' returned '0': PYTHONPATH=/home/moon/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/moon/AN_WS/build/cam_stream/build install --record /home/moon/AN_WS/build/cam_stream/install.log --single-version-externally-managed install_data

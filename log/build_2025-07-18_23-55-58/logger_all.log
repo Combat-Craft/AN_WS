@@ -1,0 +1,281 @@
+[0.198s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.198s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7bc8cf362c20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7bc8cf477b80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7bc8cf477b80>>, mixin_verb=('build',))
+[0.512s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.513s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.513s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.513s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.513s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.513s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.513s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/moon/AN_WS'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.530s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.531s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.531s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.531s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.531s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.534s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.536s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extensions ['ignore', 'ignore_ament_install']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extension 'ignore'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extension 'ignore_ament_install'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extensions ['colcon_pkg']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extension 'colcon_pkg'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extensions ['colcon_meta']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extension 'colcon_meta'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extensions ['ros']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(nova_sensors) by extension 'ros'
+[0.547s] DEBUG:colcon.colcon_core.package_identification:Package 'nova_sensors' with type 'ros.ament_python' and name 'nova_sensors'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extension 'ignore'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extension 'ignore_ament_install'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extensions ['colcon_pkg']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extension 'colcon_pkg'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extensions ['colcon_meta']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extension 'colcon_meta'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extensions ['ros']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(nova_vision) by extension 'ros'
+[0.548s] DEBUG:colcon.colcon_core.package_identification:Package 'nova_vision' with type 'ros.ament_python' and name 'nova_vision'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extensions ['ignore', 'ignore_ament_install']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extension 'ignore'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extension 'ignore_ament_install'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extensions ['colcon_pkg']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extension 'colcon_pkg'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extensions ['colcon_meta']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extension 'colcon_meta'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extensions ['ros']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam_stream) by extension 'ros'
+[0.551s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cam_stream' with type 'ros.ament_python' and name 'cam_stream'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'ignore'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'ignore_ament_install'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extensions ['colcon_pkg']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'colcon_pkg'
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extensions ['colcon_meta']
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'colcon_meta'
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extensions ['ros']
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation) by extension 'ros'
+[0.553s] DEBUG:colcon.colcon_core.package_identification:Package 'src/navigation' with type 'ros.ament_python' and name 'navigation'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(test_scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(test_scripts) by extension 'ignore'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(test_scripts) ignored
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.593s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.597s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/moon/AN_WS/install
+[0.598s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/moon/gps_ws/install
+[0.601s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 272 installed packages in /opt/ros/humble
+[0.602s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'cmake_args' from command line to 'None'
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'cmake_target' from command line to 'None'
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'cmake_clean_cache' from command line to 'False'
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'cmake_clean_first' from command line to 'False'
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'cmake_force_configure' from command line to 'False'
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'ament_cmake_args' from command line to 'None'
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'catkin_cmake_args' from command line to 'None'
+[0.656s] Level 5:colcon.colcon_core.verb:set package 'cam_stream' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.656s] DEBUG:colcon.colcon_core.verb:Building package 'cam_stream' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/moon/AN_WS/build/cam_stream', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/moon/AN_WS/install/cam_stream', 'merge_install': False, 'path': '/home/moon/AN_WS/src/cam_stream', 'symlink_install': False, 'test_result_base': None}
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_args' from command line to 'None'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_target' from command line to 'None'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.657s] DEBUG:colcon.colcon_core.verb:Building package 'navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/moon/AN_WS/build/navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/moon/AN_WS/install/navigation', 'merge_install': False, 'path': '/home/moon/AN_WS/src/navigation', 'symlink_install': False, 'test_result_base': None}
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'cmake_args' from command line to 'None'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'cmake_target' from command line to 'None'
+[0.657s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'cmake_clean_cache' from command line to 'False'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'cmake_clean_first' from command line to 'False'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'cmake_force_configure' from command line to 'False'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'ament_cmake_args' from command line to 'None'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'catkin_cmake_args' from command line to 'None'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_sensors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.658s] DEBUG:colcon.colcon_core.verb:Building package 'nova_sensors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/moon/AN_WS/build/nova_sensors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/moon/AN_WS/install/nova_sensors', 'merge_install': False, 'path': '/home/moon/AN_WS/nova_sensors', 'symlink_install': False, 'test_result_base': None}
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'cmake_args' from command line to 'None'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'cmake_target' from command line to 'None'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'cmake_clean_cache' from command line to 'False'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'cmake_clean_first' from command line to 'False'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'cmake_force_configure' from command line to 'False'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'ament_cmake_args' from command line to 'None'
+[0.658s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'catkin_cmake_args' from command line to 'None'
+[0.659s] Level 5:colcon.colcon_core.verb:set package 'nova_vision' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.659s] DEBUG:colcon.colcon_core.verb:Building package 'nova_vision' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/moon/AN_WS/build/nova_vision', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/moon/AN_WS/install/nova_vision', 'merge_install': False, 'path': '/home/moon/AN_WS/nova_vision', 'symlink_install': False, 'test_result_base': None}
+[0.659s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.660s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.661s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/moon/AN_WS/src/cam_stream' with build type 'ament_python'
+[0.662s] Level 1:colcon.colcon_core.shell:create_environment_hook('cam_stream', 'ament_prefix_path')
+[0.668s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/cam_stream/share/cam_stream/hook/ament_prefix_path.ps1'
+[0.669s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/moon/AN_WS/install/cam_stream/share/cam_stream/hook/ament_prefix_path.dsv'
+[0.670s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/cam_stream/share/cam_stream/hook/ament_prefix_path.sh'
+[0.671s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.671s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.680s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/moon/AN_WS/src/navigation' with build type 'ament_python'
+[0.681s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigation', 'ament_prefix_path')
+[0.684s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/navigation/share/navigation/hook/ament_prefix_path.ps1'
+[0.717s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/moon/AN_WS/install/navigation/share/navigation/hook/ament_prefix_path.dsv'
+[0.726s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/navigation/share/navigation/hook/ament_prefix_path.sh'
+[0.728s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.729s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.775s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/moon/AN_WS/nova_sensors' with build type 'ament_python'
+[0.789s] Level 1:colcon.colcon_core.shell:create_environment_hook('nova_sensors', 'ament_prefix_path')
+[0.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/hook/ament_prefix_path.ps1'
+[0.793s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/hook/ament_prefix_path.dsv'
+[0.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/hook/ament_prefix_path.sh'
+[0.818s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.818s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.844s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/moon/AN_WS/nova_vision' with build type 'ament_python'
+[0.845s] Level 1:colcon.colcon_core.shell:create_environment_hook('nova_vision', 'ament_prefix_path')
+[0.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/nova_vision/share/nova_vision/hook/ament_prefix_path.ps1'
+[0.847s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/moon/AN_WS/install/nova_vision/share/nova_vision/hook/ament_prefix_path.dsv'
+[0.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/nova_vision/share/nova_vision/hook/ament_prefix_path.sh'
+[0.851s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.853s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.352s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/moon/AN_WS/src/cam_stream'
+[1.353s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.353s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.780s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/moon/AN_WS/src/navigation'
+[1.780s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.781s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.262s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/moon/AN_WS/nova_sensors'
+[2.263s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.263s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.707s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/moon/AN_WS/nova_vision'
+[2.707s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.707s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/moon/AN_WS/nova_sensors': PYTHONPATH=/home/moon/AN_WS/build/nova_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_sensors build --build-base /home/moon/AN_WS/build/nova_sensors/build install --record /home/moon/AN_WS/build/nova_sensors/install.log --single-version-externally-managed install_data
+[3.731s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/moon/AN_WS/src/navigation': PYTHONPATH=/home/moon/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/moon/AN_WS/build/navigation/build install --record /home/moon/AN_WS/build/navigation/install.log --single-version-externally-managed install_data
+[3.742s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/moon/AN_WS/nova_vision': PYTHONPATH=/home/moon/AN_WS/build/nova_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_vision build --build-base /home/moon/AN_WS/build/nova_vision/build install --record /home/moon/AN_WS/build/nova_vision/install.log --single-version-externally-managed install_data
+[3.787s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/moon/AN_WS/src/cam_stream': PYTHONPATH=/home/moon/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/moon/AN_WS/build/cam_stream/build install --record /home/moon/AN_WS/build/cam_stream/install.log --single-version-externally-managed install_data
+[4.298s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/moon/AN_WS/nova_sensors' returned '0': PYTHONPATH=/home/moon/AN_WS/build/nova_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_sensors build --build-base /home/moon/AN_WS/build/nova_sensors/build install --record /home/moon/AN_WS/build/nova_sensors/install.log --single-version-externally-managed install_data
+[4.303s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_sensors' for CMake module files
+[4.304s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_sensors' for CMake config files
+[4.306s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_sensors/lib'
+[4.307s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_sensors/bin'
+[4.307s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_sensors/lib/pkgconfig/nova_sensors.pc'
+[4.307s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages'
+[4.307s] Level 1:colcon.colcon_core.shell:create_environment_hook('nova_sensors', 'pythonpath')
+[4.308s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/hook/pythonpath.ps1'
+[4.308s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/hook/pythonpath.dsv'
+[4.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/hook/pythonpath.sh'
+[4.310s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_sensors/bin'
+[4.311s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nova_sensors)
+[4.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/package.ps1'
+[4.313s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/package.dsv'
+[4.314s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/package.sh'
+[4.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/package.bash'
+[4.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/nova_sensors/share/nova_sensors/package.zsh'
+[4.317s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/moon/AN_WS/install/nova_sensors/share/colcon-core/packages/nova_sensors)
+[4.439s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/navigation' for CMake module files
+[4.443s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/navigation' for CMake config files
+[4.444s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/moon/AN_WS/src/navigation' returned '0': PYTHONPATH=/home/moon/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/moon/AN_WS/build/navigation/build install --record /home/moon/AN_WS/build/navigation/install.log --single-version-externally-managed install_data
+[4.450s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/navigation/lib'
+[4.450s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/navigation/bin'
+[4.450s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/navigation/lib/pkgconfig/navigation.pc'
+[4.451s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages'
+[4.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigation', 'pythonpath')
+[4.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/navigation/share/navigation/hook/pythonpath.ps1'
+[4.454s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/moon/AN_WS/install/navigation/share/navigation/hook/pythonpath.dsv'
+[4.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/navigation/share/navigation/hook/pythonpath.sh'
+[4.462s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/navigation/bin'
+[4.462s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navigation)
+[4.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/navigation/share/navigation/package.ps1'
+[4.464s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/moon/AN_WS/install/navigation/share/navigation/package.dsv'
+[4.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/navigation/share/navigation/package.sh'
+[4.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/navigation/share/navigation/package.bash'
+[4.470s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/navigation/share/navigation/package.zsh'
+[4.472s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/moon/AN_WS/install/navigation/share/colcon-core/packages/navigation)
+[4.494s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/cam_stream' for CMake module files
+[4.495s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/moon/AN_WS/src/cam_stream' returned '0': PYTHONPATH=/home/moon/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/moon/AN_WS/build/cam_stream/build install --record /home/moon/AN_WS/build/cam_stream/install.log --single-version-externally-managed install_data
+[4.496s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/cam_stream' for CMake config files
+[4.500s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/cam_stream/lib'
+[4.500s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/cam_stream/bin'
+[4.500s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/cam_stream/lib/pkgconfig/cam_stream.pc'
+[4.500s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages'
+[4.501s] Level 1:colcon.colcon_core.shell:create_environment_hook('cam_stream', 'pythonpath')
+[4.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/cam_stream/share/cam_stream/hook/pythonpath.ps1'
+[4.502s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/moon/AN_WS/install/cam_stream/share/cam_stream/hook/pythonpath.dsv'
+[4.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/cam_stream/share/cam_stream/hook/pythonpath.sh'
+[4.505s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/cam_stream/bin'
+[4.505s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cam_stream)
+[4.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/cam_stream/share/cam_stream/package.ps1'
+[4.507s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/moon/AN_WS/install/cam_stream/share/cam_stream/package.dsv'
+[4.508s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/cam_stream/share/cam_stream/package.sh'
+[4.509s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/cam_stream/share/cam_stream/package.bash'
+[4.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/cam_stream/share/cam_stream/package.zsh'
+[4.511s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/moon/AN_WS/install/cam_stream/share/colcon-core/packages/cam_stream)
+[4.515s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_vision' for CMake module files
+[4.517s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/moon/AN_WS/nova_vision' returned '0': PYTHONPATH=/home/moon/AN_WS/build/nova_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_vision build --build-base /home/moon/AN_WS/build/nova_vision/build install --record /home/moon/AN_WS/build/nova_vision/install.log --single-version-externally-managed install_data
+[4.518s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_vision' for CMake config files
+[4.519s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_vision/lib'
+[4.519s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_vision/bin'
+[4.519s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_vision/lib/pkgconfig/nova_vision.pc'
+[4.519s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages'
+[4.519s] Level 1:colcon.colcon_core.shell:create_environment_hook('nova_vision', 'pythonpath')
+[4.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/nova_vision/share/nova_vision/hook/pythonpath.ps1'
+[4.520s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/moon/AN_WS/install/nova_vision/share/nova_vision/hook/pythonpath.dsv'
+[4.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/moon/AN_WS/install/nova_vision/share/nova_vision/hook/pythonpath.sh'
+[4.527s] Level 1:colcon.colcon_core.environment:checking '/home/moon/AN_WS/install/nova_vision/bin'
+[4.528s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nova_vision)
+[4.528s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/nova_vision/share/nova_vision/package.ps1'
+[4.529s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/moon/AN_WS/install/nova_vision/share/nova_vision/package.dsv'
+[4.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/nova_vision/share/nova_vision/package.sh'
+[4.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/nova_vision/share/nova_vision/package.bash'
+[4.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/moon/AN_WS/install/nova_vision/share/nova_vision/package.zsh'
+[4.533s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/moon/AN_WS/install/nova_vision/share/colcon-core/packages/nova_vision)
+[4.534s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.535s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.535s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.535s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.549s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.549s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.549s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.578s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.578s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/moon/AN_WS/install/local_setup.ps1'
+[4.581s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/moon/AN_WS/install/_local_setup_util_ps1.py'
+[4.584s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/moon/AN_WS/install/setup.ps1'
+[4.587s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/moon/AN_WS/install/local_setup.sh'
+[4.588s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/moon/AN_WS/install/_local_setup_util_sh.py'
+[4.589s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/moon/AN_WS/install/setup.sh'
+[4.592s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/moon/AN_WS/install/local_setup.bash'
+[4.593s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/moon/AN_WS/install/setup.bash'
+[4.595s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/moon/AN_WS/install/local_setup.zsh'
+[4.596s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/moon/AN_WS/install/setup.zsh'
