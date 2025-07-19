@@ -10,11 +10,11 @@ class MultiCameraH264Subscriber(Node):
     def __init__(self):
         super().__init__('multi_camera_subscriber')
         self.bridge = CvBridge()
-        self.frames = {0: None, 1: None}#, 2: None
+        self.frames = {0: None, 1: None, 2: None}#
 
         self.create_subscription(CompressedImage, '/cam0/compressed', lambda msg: self.callback(msg, 0), 10)
         self.create_subscription(CompressedImage, '/cam1/compressed', lambda msg: self.callback(msg, 1), 10)
-        #self.create_subscription(CompressedImage, '/cam2/compressed', lambda msg: self.callback(msg, 2), 10)
+        self.create_subscription(CompressedImage, '/cam2/compressed', lambda msg: self.callback(msg, 2), 10)
         self.get_logger().info('trying')
         self.timer = self.create_timer(0.05, self.display_frames)  # 20 Hz
 
@@ -33,7 +33,7 @@ class MultiCameraH264Subscriber(Node):
         # Check if all frames are not None
         if all(frame is not None for frame in self.frames.values()):
             try:
-                combined = np.hstack([self.frames[0], self.frames[1]])# Testing for 2: , self.frames[2]
+                combined = np.hstack([self.frames[0], self.frames[1], self.frames[2]])# Testing for 2
                 cv2.imshow("Three Camera Feeds", combined)
                 cv2.waitKey(1)
             except Exception as e:
