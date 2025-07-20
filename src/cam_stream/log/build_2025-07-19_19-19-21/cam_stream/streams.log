@@ -1,0 +1,47 @@
+[1.442s] Invoking command in '/home/tasc/AN_WS-1/src/cam_stream': PYTHONPATH=/home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/cam_stream build --build-base /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build install --record /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/install.log --single-version-externally-managed install_data
+[2.001s] running egg_info
+[2.002s] creating build/cam_stream/cam_stream.egg-info
+[2.002s] writing build/cam_stream/cam_stream.egg-info/PKG-INFO
+[2.003s] writing dependency_links to build/cam_stream/cam_stream.egg-info/dependency_links.txt
+[2.003s] writing entry points to build/cam_stream/cam_stream.egg-info/entry_points.txt
+[2.004s] writing requirements to build/cam_stream/cam_stream.egg-info/requires.txt
+[2.004s] writing top-level names to build/cam_stream/cam_stream.egg-info/top_level.txt
+[2.004s] writing manifest file 'build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[2.008s] reading manifest file 'build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[2.010s] writing manifest file 'build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[2.010s] running build
+[2.010s] running build_py
+[2.011s] creating /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build
+[2.011s] creating /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib
+[2.011s] creating /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream
+[2.011s] copying cam_stream/gps_node.py -> /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream
+[2.011s] copying cam_stream/multi_camera_publisher.py -> /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream
+[2.012s] copying cam_stream/multi_cam_gps_aruco.py -> /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream
+[2.012s] copying cam_stream/__init__.py -> /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream
+[2.012s] copying cam_stream/multi_camera_subscriber.py -> /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream
+[2.013s] running install
+[2.013s] running install_lib
+[2.015s] creating /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[2.016s] copying /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream/gps_node.py -> /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[2.016s] copying /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream/multi_camera_publisher.py -> /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[2.016s] copying /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream/multi_cam_gps_aruco.py -> /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[2.016s] copying /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream/__init__.py -> /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[2.017s] copying /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build/lib/cam_stream/multi_camera_subscriber.py -> /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[2.018s] byte-compiling /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream/gps_node.py to gps_node.cpython-310.pyc
+[2.021s] byte-compiling /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_publisher.py to multi_camera_publisher.cpython-310.pyc
+[2.022s] byte-compiling /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_cam_gps_aruco.py to multi_cam_gps_aruco.cpython-310.pyc
+[2.026s] byte-compiling /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream/__init__.py to __init__.cpython-310.pyc
+[2.026s] byte-compiling /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_subscriber.py to multi_camera_subscriber.cpython-310.pyc
+[2.028s] running install_data
+[2.029s] creating /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/share/ament_index
+[2.029s] creating /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/share/ament_index/resource_index
+[2.029s] creating /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/share/ament_index/resource_index/packages
+[2.029s] copying resource/cam_stream -> /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/share/ament_index/resource_index/packages
+[2.029s] copying package.xml -> /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/share/cam_stream
+[2.030s] running install_egg_info
+[2.038s] Copying build/cam_stream/cam_stream.egg-info to /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info
+[2.040s] running install_scripts
+[2.088s] Installing multi_camera_publisher script to /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/cam_stream
+[2.088s] Installing multi_camera_subscriber script to /home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/cam_stream
+[2.089s] writing list of installed files to '/home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/install.log'
+[2.161s] Invoked command in '/home/tasc/AN_WS-1/src/cam_stream' returned '0': PYTHONPATH=/home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tasc/AN_WS-1/src/cam_stream/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/cam_stream build --build-base /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/build install --record /home/tasc/AN_WS-1/src/cam_stream/build/cam_stream/install.log --single-version-externally-managed install_data

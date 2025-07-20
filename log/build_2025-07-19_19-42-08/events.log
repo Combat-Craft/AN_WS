@@ -1,0 +1,34 @@
+[0.000000] (-) TimerEvent: {}
+[0.000737] (cam_stream) JobQueued: {'identifier': 'cam_stream', 'dependencies': OrderedDict()}
+[0.001269] (navigation) JobQueued: {'identifier': 'navigation', 'dependencies': OrderedDict()}
+[0.001490] (nova_sensors) JobQueued: {'identifier': 'nova_sensors', 'dependencies': OrderedDict()}
+[0.001820] (nova_vision) JobQueued: {'identifier': 'nova_vision', 'dependencies': OrderedDict()}
+[0.002133] (cam_stream) JobStarted: {'identifier': 'cam_stream'}
+[0.020133] (navigation) JobStarted: {'identifier': 'navigation'}
+[0.033131] (nova_sensors) JobStarted: {'identifier': 'nova_sensors'}
+[0.046706] (nova_vision) JobStarted: {'identifier': 'nova_vision'}
+[0.099369] (-) TimerEvent: {}
+[0.200221] (-) TimerEvent: {}
+[0.301061] (-) TimerEvent: {}
+[0.401893] (-) TimerEvent: {}
+[0.502717] (-) TimerEvent: {}
+[0.603498] (-) TimerEvent: {}
+[0.704289] (-) TimerEvent: {}
+[0.713351] (cam_stream) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 51, in build\n    setup_py_data = get_setup_data(self.context.pkg, env)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/__init__.py", line 20, in get_setup_data\n    return dict(pkg.metadata[key](env))\n  File "/usr/lib/python3/dist-packages/colcon_ros/package_augmentation/ros_ament_python.py", line 57, in getter\n    return get_setup_information(\n  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 249, in get_setup_information\n    _setup_information_cache[hashable_env] = _get_setup_information(\n  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 296, in _get_setup_information\n    result = subprocess.run(\n  File "/usr/lib/python3.10/subprocess.py", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command \'[\'/usr/bin/python3\', \'-c\', \'import sys;from contextlib import suppress;exec("with suppress(ImportError):    from setuptools.extern.packaging.specifiers    import SpecifierSet");exec("with suppress(ImportError):    from packaging.specifiers import SpecifierSet");from distutils.core import run_setup;dist = run_setup(    \\\'setup.py\\\', script_args=(\\\'--dry-run\\\',), stop_after=\\\'config\\\');skip_keys = (\\\'cmdclass\\\', \\\'distclass\\\', \\\'ext_modules\\\', \\\'metadata\\\');data = {    key: value for key, value in dist.__dict__.items()     if (        not key.startswith(\\\'_\\\') and         not callable(value) and         key not in skip_keys and         key not in dist.display_option_names    )};data[\\\'metadata\\\'] = {    k: v for k, v in dist.metadata.__dict__.items()     if k not in (\\\'license_files\\\', \\\'provides_extras\\\')};sys.stdout.buffer.write(repr(data).encode(\\\'utf-8\\\'))\']\' returned non-zero exit status 1.\n'}
+[0.716901] (cam_stream) JobEnded: {'identifier': 'cam_stream', 'rc': 1}
+[0.804443] (-) TimerEvent: {}
+[0.905118] (-) TimerEvent: {}
+[1.005852] (-) TimerEvent: {}
+[1.106574] (-) TimerEvent: {}
+[1.207273] (-) TimerEvent: {}
+[1.307999] (-) TimerEvent: {}
+[1.408822] (-) TimerEvent: {}
+[1.509649] (-) TimerEvent: {}
+[1.610429] (-) TimerEvent: {}
+[1.711180] (-) TimerEvent: {}
+[1.811968] (-) TimerEvent: {}
+[1.912770] (-) TimerEvent: {}
+[1.945282] (navigation) JobEnded: {'identifier': 'navigation', 'rc': 'SIGINT'}
+[1.947714] (nova_sensors) JobEnded: {'identifier': 'nova_sensors', 'rc': 'SIGINT'}
+[1.948743] (nova_vision) JobEnded: {'identifier': 'nova_vision', 'rc': 'SIGINT'}
+[1.958855] (-) EventReactorShutdown: {}

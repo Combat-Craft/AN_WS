@@ -9,8 +9,11 @@ setup.py
 ../../build/cam_stream/cam_stream.egg-info/top_level.txt
 ../../build/cam_stream/cam_stream.egg-info/zip-safe
 cam_stream/__init__.py
+cam_stream/gps_node.py
+cam_stream/multi_cam_gps_aruco.py
 cam_stream/multi_camera_publisher.py
 cam_stream/multi_camera_subscriber.py
+launch/multi.camera.launch.py
 resource/cam_stream
 test/test_copyright.py
 test/test_flake8.py
