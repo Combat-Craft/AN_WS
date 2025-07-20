@@ -13,9 +13,9 @@ from gi.repository import Gst
 import threading
 
 
-class MultiCameraSubscriber(Node):
+class MultiCamGpsAruco(Node):
     def __init__(self):
-        super().__init__('multi_camera_subscriber')
+        super().__init__('multi_cam_gps_aruco')
         Gst.init(None)
 
         # Define camera topics
@@ -57,8 +57,7 @@ class MultiCameraSubscriber(Node):
 
         # ArUco
         self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_100)
-        self.parameters = cv2.aruco.DetectorParameters()
-        self.detector = cv2.aruco.ArucoDetector(self.aruco_dict, self.parameters)
+        self.parameters = cv2.aruco.DetectorParameters_create()
 
         # GPS subscriber
         self.create_subscription(NavSatFix, '/gps_data', self.gps_callback, 10)
@@ -67,10 +66,10 @@ class MultiCameraSubscriber(Node):
 
 
     def setup_pipeline(self, cam_id):
-        decoder = "nvh264dec ! videoconvert" if self.has_cuda() else "avdec_h264 ! videoconvert"
+        decoder = "avdec_h264 ! videoconvert" #if self.has_cuda() else "avdec_h264 ! videoconvert"
         pipeline_str = (
             f"appsrc name=mysrc_{cam_id} is-live=true block=true format=time ! "
-            f"h264parse ! {decoder} ! "
+            f"h264parse disable-passthrough=true config-interval=-1 ! {decoder} ! "
             "video/x-raw,format=BGR ! "
             f"appsink name=mysink_{cam_id} emit-signals=true sync=false max-buffers=1 drop=true"
         )
@@ -100,11 +99,12 @@ class MultiCameraSubscriber(Node):
             # Push H264 encoded data into GStreamer
             buf = Gst.Buffer.new_allocate(None, len(msg.data), None)
             buf.fill(0, msg.data)
-            buf.pts = buf.dts = int(time.time() * Gst.SECOND)
+            buf.pts = buf.dts = Gst.CLOCK_TIME_NONE
             self.appsrcs[cam_id].emit('push-buffer', buf)
 
             # Pull frame from appsink
-            sample = self.appsinks[cam_id].emit('try-pull-sample', Gst.SECOND)
+            sample = self.appsinks[cam_id].emit('try-pull-sample', 3 * Gst.SECOND)
+            self.get_logger().info(f"Received frame from cam {cam_id}, size: {len(msg.data)} bytes")
             if sample:
                 buf = sample.get_buffer()
                 caps = sample.get_caps()
@@ -153,6 +153,8 @@ class MultiCameraSubscriber(Node):
                         self.write_log(gps_log_msg)
                         self.last_logged_gps_text = self.last_known_gps_text
                         self.last_gps_log_time = now
+            if sample is None:
+                self.get_logger().warn(f"Sample is None for cam {cam_id}")
 
         except Exception as e:
             self.get_logger().error(f"Error in image_callback for camera {cam_id}: {e}")
@@ -208,7 +210,7 @@ class MultiCameraSubscriber(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = MultiCameraSubscriber()
+    node = MultiCamGpsAruco()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

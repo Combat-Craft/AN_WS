@@ -1,0 +1,31 @@
+[7.229s] Invoking command in '/home/moon/AN_WS/src/navigation': PYTHONPATH=/home/moon/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/moon/AN_WS/build/navigation/build install --record /home/moon/AN_WS/build/navigation/install.log --single-version-externally-managed install_data
+[10.561s] running egg_info
+[10.568s] writing ../../build/navigation/navigation.egg-info/PKG-INFO
+[10.586s] writing dependency_links to ../../build/navigation/navigation.egg-info/dependency_links.txt
+[10.587s] writing entry points to ../../build/navigation/navigation.egg-info/entry_points.txt
+[10.587s] writing requirements to ../../build/navigation/navigation.egg-info/requires.txt
+[10.587s] writing top-level names to ../../build/navigation/navigation.egg-info/top_level.txt
+[10.589s] reading manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+[10.590s] adding license file 'LICENSE'
+[10.590s] writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+[10.590s] running build
+[10.590s] running build_py
+[10.617s] running install
+[10.618s] running install_lib
+[10.618s] running install_data
+[10.619s] running install_egg_info
+[10.628s] removing '/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info' (and everything under it)
+[10.628s] Copying ../../build/navigation/navigation.egg-info to /home/moon/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info
+[10.629s] running install_scripts
+[10.687s] Installing aruco_marker_publisher script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.688s] Installing camera_publisher script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.688s] Installing camera_subscriber script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.688s] Installing combined_gps_aruco script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.690s] Installing gps_display script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.691s] Installing gps_node script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.691s] Installing gst_pub script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.691s] Installing multi_camera_publisher script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.693s] Installing multi_camera_publisher_gst script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.693s] Installing multi_camera_subscriber_gst script to /home/moon/AN_WS/install/navigation/lib/navigation
+[10.697s] writing list of installed files to '/home/moon/AN_WS/build/navigation/install.log'
+[10.738s] Invoked command in '/home/moon/AN_WS/src/navigation' returned '0': PYTHONPATH=/home/moon/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/moon/AN_WS/build/navigation/build install --record /home/moon/AN_WS/build/navigation/install.log --single-version-externally-managed install_data

@@ -1,0 +1,27 @@
+[4.741s] Invoking command in '/home/moon/AN_WS/src/cam_stream': PYTHONPATH=/home/moon/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/moon/AN_WS/build/cam_stream/build install --record /home/moon/AN_WS/build/cam_stream/install.log --single-version-externally-managed install_data
+[7.730s] running egg_info
+[7.736s] writing ../../build/cam_stream/cam_stream.egg-info/PKG-INFO
+[7.737s] writing dependency_links to ../../build/cam_stream/cam_stream.egg-info/dependency_links.txt
+[7.764s] writing entry points to ../../build/cam_stream/cam_stream.egg-info/entry_points.txt
+[7.765s] writing requirements to ../../build/cam_stream/cam_stream.egg-info/requires.txt
+[7.765s] writing top-level names to ../../build/cam_stream/cam_stream.egg-info/top_level.txt
+[7.778s] reading manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[7.778s] writing manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[7.779s] running build
+[7.779s] running build_py
+[7.804s] copying cam_stream/multi_cam_gps_aruco.py -> /home/moon/AN_WS/build/cam_stream/build/lib/cam_stream
+[7.809s] running install
+[7.809s] running install_lib
+[7.809s] copying /home/moon/AN_WS/build/cam_stream/build/lib/cam_stream/multi_cam_gps_aruco.py -> /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[7.810s] byte-compiling /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_cam_gps_aruco.py to multi_cam_gps_aruco.cpython-310.pyc
+[7.820s] running install_data
+[7.821s] running install_egg_info
+[7.842s] removing '/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info' (and everything under it)
+[7.860s] Copying ../../build/cam_stream/cam_stream.egg-info to /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info
+[7.861s] running install_scripts
+[8.024s] Installing gps_node script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream
+[8.027s] Installing multi_cam_gps_aruco script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream
+[8.036s] Installing multi_camera_publisher script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream
+[8.037s] Installing multi_camera_subscriber script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream
+[8.050s] writing list of installed files to '/home/moon/AN_WS/build/cam_stream/install.log'
+[8.421s] Invoked command in '/home/moon/AN_WS/src/cam_stream' returned '0': PYTHONPATH=/home/moon/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/moon/AN_WS/build/cam_stream/build install --record /home/moon/AN_WS/build/cam_stream/install.log --single-version-externally-managed install_data
