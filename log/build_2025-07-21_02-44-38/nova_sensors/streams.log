@@ -1,0 +1,21 @@
+[2.834s] Invoking command in '/home/TASC/AN_WS/nova_sensors': PYTHONPATH=/home/TASC/AN_WS/build/nova_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_sensors build --build-base /home/TASC/AN_WS/build/nova_sensors/build install --record /home/TASC/AN_WS/build/nova_sensors/install.log --single-version-externally-managed install_data
+[3.305s] running egg_info
+[3.329s] writing ../build/nova_sensors/nova_sensors.egg-info/PKG-INFO
+[3.344s] writing dependency_links to ../build/nova_sensors/nova_sensors.egg-info/dependency_links.txt
+[3.350s] writing entry points to ../build/nova_sensors/nova_sensors.egg-info/entry_points.txt
+[3.355s] writing requirements to ../build/nova_sensors/nova_sensors.egg-info/requires.txt
+[3.364s] writing top-level names to ../build/nova_sensors/nova_sensors.egg-info/top_level.txt
+[3.369s] reading manifest file '../build/nova_sensors/nova_sensors.egg-info/SOURCES.txt'
+[3.369s] writing manifest file '../build/nova_sensors/nova_sensors.egg-info/SOURCES.txt'
+[3.381s] running build
+[3.382s] running build_py
+[3.383s] running install
+[3.383s] running install_lib
+[3.385s] running install_data
+[3.387s] running install_egg_info
+[3.395s] removing '/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages/nova_sensors-0.0.0-py3.10.egg-info' (and everything under it)
+[3.446s] Copying ../build/nova_sensors/nova_sensors.egg-info to /home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages/nova_sensors-0.0.0-py3.10.egg-info
+[3.470s] running install_scripts
+[3.620s] Installing gps_node = nova_sensors.gps_node:mainimu_node script to /home/TASC/AN_WS/install/nova_sensors/lib/nova_sensors
+[3.638s] writing list of installed files to '/home/TASC/AN_WS/build/nova_sensors/install.log'
+[3.855s] Invoked command in '/home/TASC/AN_WS/nova_sensors' returned '0': PYTHONPATH=/home/TASC/AN_WS/build/nova_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_sensors build --build-base /home/TASC/AN_WS/build/nova_sensors/build install --record /home/TASC/AN_WS/build/nova_sensors/install.log --single-version-externally-managed install_data

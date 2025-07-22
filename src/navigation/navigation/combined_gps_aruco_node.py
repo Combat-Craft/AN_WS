@@ -20,9 +20,8 @@ class CombinedGpsArucoNode(Node):
 
         # ArUco setup
         self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_100)
-        self.parameters = cv2.aruco.DetectorParameters()
+        self.parameters = cv2.aruco.DetectorParameters_create()
         self.detector = cv2.aruco.ArucoDetector(self.aruco_dict, self.parameters)
-
         self.br = CvBridge()
 
         self.cap = cv2.VideoCapture(video_device)

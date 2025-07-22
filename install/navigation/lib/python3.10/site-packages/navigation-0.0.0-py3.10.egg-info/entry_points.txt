@@ -8,5 +8,6 @@ gps_node = navigation.gps_node:main
 gst_pub = navigation.gst_pub:main
 multi_camera_publisher = navigation.multi_camera_publisher:main
 multi_camera_publisher_gst = navigation.multi_camera_publisher_gst:main
+multi_camera_publisher_test = navigation.multi_camera_publisher_test:main
 multi_camera_subscriber_gst = navigation.multi_camera_subscriber_gst:main
 

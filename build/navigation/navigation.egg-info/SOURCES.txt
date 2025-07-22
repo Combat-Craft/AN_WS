@@ -24,6 +24,7 @@ navigation/multi_camera_publisher.py
 navigation/multi_camera_publisher_gst.py
 navigation/multi_camera_publisher_old.py
 navigation/multi_camera_publisher_previous.py
+navigation/multi_camera_publisher_test.py
 navigation/multi_camera_subscriber_gst.py
 resource/navigation
 test/test_copyright.py

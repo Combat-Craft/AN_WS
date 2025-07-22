@@ -1,0 +1,35 @@
+[1.328s] Invoking command in '/home/TASC/AN_WS/src/navigation': PYTHONPATH=/home/TASC/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/TASC/AN_WS/build/navigation/build install --record /home/TASC/AN_WS/build/navigation/install.log --single-version-externally-managed install_data
+[1.736s] running egg_info
+[1.738s] writing ../../build/navigation/navigation.egg-info/PKG-INFO
+[1.740s] writing dependency_links to ../../build/navigation/navigation.egg-info/dependency_links.txt
+[1.742s] writing entry points to ../../build/navigation/navigation.egg-info/entry_points.txt
+[1.742s] writing requirements to ../../build/navigation/navigation.egg-info/requires.txt
+[1.742s] writing top-level names to ../../build/navigation/navigation.egg-info/top_level.txt
+[1.748s] reading manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+[1.749s] adding license file 'LICENSE'
+[1.751s] writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+[1.751s] running build
+[1.751s] running build_py
+[1.753s] copying navigation/multi_camera_publisher_test.py -> /home/TASC/AN_WS/build/navigation/build/lib/navigation
+[1.753s] running install
+[1.754s] running install_lib
+[1.759s] copying /home/TASC/AN_WS/build/navigation/build/lib/navigation/multi_camera_publisher_test.py -> /home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation
+[1.761s] byte-compiling /home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/multi_camera_publisher_test.py to multi_camera_publisher_test.cpython-310.pyc
+[1.765s] running install_data
+[1.766s] running install_egg_info
+[1.773s] removing '/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info' (and everything under it)
+[1.776s] Copying ../../build/navigation/navigation.egg-info to /home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info
+[1.776s] running install_scripts
+[1.819s] Installing aruco_marker_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.821s] Installing camera_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.821s] Installing camera_subscriber script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.821s] Installing combined_gps_aruco script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.821s] Installing gps_display script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.825s] Installing gps_node script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.825s] Installing gst_pub script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.825s] Installing multi_camera_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.825s] Installing multi_camera_publisher_gst script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.825s] Installing multi_camera_publisher_test script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.827s] Installing multi_camera_subscriber_gst script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[1.828s] writing list of installed files to '/home/TASC/AN_WS/build/navigation/install.log'
+[1.927s] Invoked command in '/home/TASC/AN_WS/src/navigation' returned '0': PYTHONPATH=/home/TASC/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/TASC/AN_WS/build/navigation/build install --record /home/TASC/AN_WS/build/navigation/install.log --single-version-externally-managed install_data

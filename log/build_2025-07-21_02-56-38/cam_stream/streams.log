@@ -1,0 +1,25 @@
+[1.782s] Invoking command in '/home/TASC/AN_WS/src/cam_stream': PYTHONPATH=/home/TASC/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/TASC/AN_WS/build/cam_stream/build install --record /home/TASC/AN_WS/build/cam_stream/install.log --single-version-externally-managed install_data
+[2.323s] running egg_info
+[2.325s] writing ../../build/cam_stream/cam_stream.egg-info/PKG-INFO
+[2.325s] writing dependency_links to ../../build/cam_stream/cam_stream.egg-info/dependency_links.txt
+[2.330s] writing entry points to ../../build/cam_stream/cam_stream.egg-info/entry_points.txt
+[2.330s] writing requirements to ../../build/cam_stream/cam_stream.egg-info/requires.txt
+[2.332s] writing top-level names to ../../build/cam_stream/cam_stream.egg-info/top_level.txt
+[2.337s] reading manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[2.342s] writing manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[2.347s] running build
+[2.348s] running build_py
+[2.348s] copying cam_stream/multi_camera_subscriber.py -> /home/TASC/AN_WS/build/cam_stream/build/lib/cam_stream
+[2.353s] running install
+[2.355s] running install_lib
+[2.357s] copying /home/TASC/AN_WS/build/cam_stream/build/lib/cam_stream/multi_camera_subscriber.py -> /home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[2.357s] byte-compiling /home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_subscriber.py to multi_camera_subscriber.cpython-310.pyc
+[2.363s] running install_data
+[2.363s] running install_egg_info
+[2.364s] removing '/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info' (and everything under it)
+[2.366s] Copying ../../build/cam_stream/cam_stream.egg-info to /home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info
+[2.367s] running install_scripts
+[2.425s] Installing multi_camera_publisher script to /home/TASC/AN_WS/install/cam_stream/lib/cam_stream
+[2.426s] Installing multi_camera_subscriber script to /home/TASC/AN_WS/install/cam_stream/lib/cam_stream
+[2.428s] writing list of installed files to '/home/TASC/AN_WS/build/cam_stream/install.log'
+[2.566s] Invoked command in '/home/TASC/AN_WS/src/cam_stream' returned '0': PYTHONPATH=/home/TASC/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/TASC/AN_WS/build/cam_stream/build install --record /home/TASC/AN_WS/build/cam_stream/install.log --single-version-externally-managed install_data

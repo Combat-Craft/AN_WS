@@ -27,6 +27,7 @@ setup(
             'gps_display = navigation.gps_display:main',
             'camera_publisher = navigation.camera_publisher:main',
             'multi_camera_publisher = navigation.multi_camera_publisher:main',
+            'multi_camera_publisher_test = navigation.multi_camera_publisher_test:main',
             'aruco_marker_publisher = navigation.aruco_marker_publisher:main',
             'combined_gps_aruco = navigation.combined_gps_aruco_node:main',
             'camera_subscriber = navigation.camera_subscriber:main',

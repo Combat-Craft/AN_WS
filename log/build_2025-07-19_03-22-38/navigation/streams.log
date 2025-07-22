@@ -1,0 +1,31 @@
+[2.823s] Invoking command in '/home/TASC/AN_WS/src/navigation': PYTHONPATH=/home/TASC/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/TASC/AN_WS/build/navigation/build install --record /home/TASC/AN_WS/build/navigation/install.log --single-version-externally-managed install_data
+[3.631s] running egg_info
+[3.632s] writing ../../build/navigation/navigation.egg-info/PKG-INFO
+[3.635s] writing dependency_links to ../../build/navigation/navigation.egg-info/dependency_links.txt
+[3.639s] writing entry points to ../../build/navigation/navigation.egg-info/entry_points.txt
+[3.639s] writing requirements to ../../build/navigation/navigation.egg-info/requires.txt
+[3.639s] writing top-level names to ../../build/navigation/navigation.egg-info/top_level.txt
+[3.643s] reading manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+[3.645s] adding license file 'LICENSE'
+[3.645s] writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'
+[3.646s] running build
+[3.646s] running build_py
+[3.648s] running install
+[3.649s] running install_lib
+[3.695s] running install_data
+[3.695s] running install_egg_info
+[3.726s] removing '/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info' (and everything under it)
+[3.727s] Copying ../../build/navigation/navigation.egg-info to /home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info
+[3.731s] running install_scripts
+[3.869s] Installing aruco_marker_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.872s] Installing camera_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.879s] Installing camera_subscriber script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.884s] Installing combined_gps_aruco script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.886s] Installing gps_display script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.890s] Installing gps_node script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.897s] Installing gst_pub script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.898s] Installing multi_camera_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.899s] Installing multi_camera_publisher_gst script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.899s] Installing multi_camera_subscriber_gst script to /home/TASC/AN_WS/install/navigation/lib/navigation
+[3.900s] writing list of installed files to '/home/TASC/AN_WS/build/navigation/install.log'
+[4.108s] Invoked command in '/home/TASC/AN_WS/src/navigation' returned '0': PYTHONPATH=/home/TASC/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navigation build --build-base /home/TASC/AN_WS/build/navigation/build install --record /home/TASC/AN_WS/build/navigation/install.log --single-version-externally-managed install_data

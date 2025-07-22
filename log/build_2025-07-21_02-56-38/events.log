@@ -1,0 +1,58 @@
+[0.000000] (-) TimerEvent: {}
+[0.001382] (-) JobUnselected: {'identifier': 'navigation'}
+[0.001917] (-) JobUnselected: {'identifier': 'nova_sensors'}
+[0.002351] (-) JobUnselected: {'identifier': 'nova_vision'}
+[0.002670] (cam_stream) JobQueued: {'identifier': 'cam_stream', 'dependencies': OrderedDict()}
+[0.002751] (cam_stream) JobStarted: {'identifier': 'cam_stream'}
+[0.099159] (-) TimerEvent: {}
+[0.204318] (-) TimerEvent: {}
+[0.304977] (-) TimerEvent: {}
+[0.406841] (-) TimerEvent: {}
+[0.511010] (-) TimerEvent: {}
+[0.614498] (-) TimerEvent: {}
+[0.719543] (-) TimerEvent: {}
+[0.820198] (-) TimerEvent: {}
+[0.920871] (-) TimerEvent: {}
+[1.025793] (-) TimerEvent: {}
+[1.129632] (-) TimerEvent: {}
+[1.230934] (-) TimerEvent: {}
+[1.333169] (-) TimerEvent: {}
+[1.434001] (-) TimerEvent: {}
+[1.535619] (-) TimerEvent: {}
+[1.637824] (-) TimerEvent: {}
+[1.738696] (-) TimerEvent: {}
+[1.777202] (cam_stream) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/cam_stream', 'build', '--build-base', '/home/TASC/AN_WS/build/cam_stream/build', 'install', '--record', '/home/TASC/AN_WS/build/cam_stream/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/TASC/AN_WS/src/cam_stream', 'env': {'HOSTNAME': 'c28f0df95c2f', 'GIT_ASKPASS': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/helpers/browser.sh', 'HOME': '/root', 'OLDPWD': '/home/TASC', 'TERM_PROGRAM_VERSION': '1.102.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-dacb9fd4-84dc-41d9-8333-00252718f875.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/home/TASC/AN_WS/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-71cc6471-cbf7-4512-aff3-6dd24f89629c.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-71cc6471-cbf7-4512-aff3-6dd24f89629c.sock","/root/.gnupg/S.gpg-agent"]', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-2b31b95288.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-71cc6471-cbf7-4512-aff3-6dd24f89629c.sock', 'AMENT_PREFIX_PATH': '/opt/ros/humble:/home/TASC/AN_WS/install/nova_vision:/home/TASC/AN_WS/install/nova_sensors:/home/TASC/AN_WS/install/navigation:/home/TASC/AN_WS/install/cam_stream', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'PWD': '/home/TASC/AN_WS/build/cam_stream', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/TASC/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/TASC/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages', 'COLCON': '1'}, 'shell': False}
+[1.838807] (-) TimerEvent: {}
+[1.940242] (-) TimerEvent: {}
+[2.041194] (-) TimerEvent: {}
+[2.141713] (-) TimerEvent: {}
+[2.242323] (-) TimerEvent: {}
+[2.325343] (cam_stream) StdoutLine: {'line': b'running egg_info\n'}
+[2.327269] (cam_stream) StdoutLine: {'line': b'writing ../../build/cam_stream/cam_stream.egg-info/PKG-INFO\n'}
+[2.327967] (cam_stream) StdoutLine: {'line': b'writing dependency_links to ../../build/cam_stream/cam_stream.egg-info/dependency_links.txt\n'}
+[2.331728] (cam_stream) StdoutLine: {'line': b'writing entry points to ../../build/cam_stream/cam_stream.egg-info/entry_points.txt\n'}
+[2.333097] (cam_stream) StdoutLine: {'line': b'writing requirements to ../../build/cam_stream/cam_stream.egg-info/requires.txt\n'}
+[2.334628] (cam_stream) StdoutLine: {'line': b'writing top-level names to ../../build/cam_stream/cam_stream.egg-info/top_level.txt\n'}
+[2.339256] (cam_stream) StdoutLine: {'line': b"reading manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'\n"}
+[2.344438] (cam_stream) StdoutLine: {'line': b"writing manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'\n"}
+[2.344932] (-) TimerEvent: {}
+[2.346030] (cam_stream) StdoutLine: {'line': b'running build\n'}
+[2.350104] (cam_stream) StdoutLine: {'line': b'running build_py\n'}
+[2.350393] (cam_stream) StdoutLine: {'line': b'copying cam_stream/multi_camera_subscriber.py -> /home/TASC/AN_WS/build/cam_stream/build/lib/cam_stream\n'}
+[2.350582] (cam_stream) StdoutLine: {'line': b'running install\n'}
+[2.357504] (cam_stream) StdoutLine: {'line': b'running install_lib\n'}
+[2.359477] (cam_stream) StdoutLine: {'line': b'copying /home/TASC/AN_WS/build/cam_stream/build/lib/cam_stream/multi_camera_subscriber.py -> /home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream\n'}
+[2.359795] (cam_stream) StdoutLine: {'line': b'byte-compiling /home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_subscriber.py to multi_camera_subscriber.cpython-310.pyc\n'}
+[2.365502] (cam_stream) StdoutLine: {'line': b'running install_data\n'}
+[2.365966] (cam_stream) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.366184] (cam_stream) StdoutLine: {'line': b"removing '/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[2.369043] (cam_stream) StdoutLine: {'line': b'Copying ../../build/cam_stream/cam_stream.egg-info to /home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info\n'}
+[2.369763] (cam_stream) StdoutLine: {'line': b'running install_scripts\n'}
+[2.427737] (cam_stream) StdoutLine: {'line': b'Installing multi_camera_publisher script to /home/TASC/AN_WS/install/cam_stream/lib/cam_stream\n'}
+[2.428380] (cam_stream) StdoutLine: {'line': b'Installing multi_camera_subscriber script to /home/TASC/AN_WS/install/cam_stream/lib/cam_stream\n'}
+[2.429640] (cam_stream) StdoutLine: {'line': b"writing list of installed files to '/home/TASC/AN_WS/build/cam_stream/install.log'\n"}
+[2.445141] (-) TimerEvent: {}
+[2.549311] (-) TimerEvent: {}
+[2.567898] (cam_stream) CommandEnded: {'returncode': 0}
+[2.618139] (cam_stream) JobEnded: {'identifier': 'cam_stream', 'rc': 0}
+[2.620462] (-) EventReactorShutdown: {}

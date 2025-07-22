@@ -3,6 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import CompressedImage
+from cv_bridge import CvBridge
 import cv2
 import numpy as np
 
@@ -10,11 +11,10 @@ class MultiCameraH264Subscriber(Node):
     def __init__(self):
         super().__init__('multi_camera_subscriber')
         self.bridge = CvBridge()
-        self.frames = {0: None, 1: None, 2: None}#
+        self.frames = {0: None, 1: None}  # Only cameras 0 and 1
 
         self.create_subscription(CompressedImage, '/cam0/compressed', lambda msg: self.callback(msg, 0), 10)
         self.create_subscription(CompressedImage, '/cam1/compressed', lambda msg: self.callback(msg, 1), 10)
-        self.create_subscription(CompressedImage, '/cam2/compressed', lambda msg: self.callback(msg, 2), 10)
         self.get_logger().info('trying')
         self.timer = self.create_timer(0.05, self.display_frames)  # 20 Hz
 
@@ -30,11 +30,11 @@ class MultiCameraH264Subscriber(Node):
             self.get_logger().warn(f"Exception decoding cam {cam_id}: {e}")
 
     def display_frames(self):
-        # Check if all frames are not None
+        # Check if both frames are available
         if all(frame is not None for frame in self.frames.values()):
             try:
-                combined = np.hstack([self.frames[0], self.frames[1], self.frames[2]])# Testing for 2
-                cv2.imshow("Three Camera Feeds", combined)
+                combined = np.hstack([self.frames[0], self.frames[1]])  # Only 2 cameras
+                cv2.imshow("Two Camera Feeds", combined)
                 cv2.waitKey(1)
             except Exception as e:
                 self.get_logger().warn(f'Error displaying frames: {e}')

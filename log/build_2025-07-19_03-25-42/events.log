@@ -1,0 +1,176 @@
+[0.000000] (-) TimerEvent: {}
+[0.000430] (cam_stream) JobQueued: {'identifier': 'cam_stream', 'dependencies': OrderedDict()}
+[0.000818] (navigation) JobQueued: {'identifier': 'navigation', 'dependencies': OrderedDict()}
+[0.001019] (nova_sensors) JobQueued: {'identifier': 'nova_sensors', 'dependencies': OrderedDict()}
+[0.001045] (nova_vision) JobQueued: {'identifier': 'nova_vision', 'dependencies': OrderedDict()}
+[0.001224] (cam_stream) JobStarted: {'identifier': 'cam_stream'}
+[0.024472] (navigation) JobStarted: {'identifier': 'navigation'}
+[0.035756] (nova_sensors) JobStarted: {'identifier': 'nova_sensors'}
+[0.057860] (nova_vision) JobStarted: {'identifier': 'nova_vision'}
+[0.100437] (-) TimerEvent: {}
+[0.201521] (-) TimerEvent: {}
+[0.302018] (-) TimerEvent: {}
+[0.402554] (-) TimerEvent: {}
+[0.503614] (-) TimerEvent: {}
+[0.607166] (-) TimerEvent: {}
+[0.708305] (-) TimerEvent: {}
+[0.810701] (-) TimerEvent: {}
+[0.911308] (-) TimerEvent: {}
+[1.011894] (-) TimerEvent: {}
+[1.112541] (-) TimerEvent: {}
+[1.214520] (-) TimerEvent: {}
+[1.316005] (-) TimerEvent: {}
+[1.416775] (-) TimerEvent: {}
+[1.517392] (-) TimerEvent: {}
+[1.617961] (-) TimerEvent: {}
+[1.718671] (-) TimerEvent: {}
+[1.819429] (-) TimerEvent: {}
+[1.920488] (-) TimerEvent: {}
+[2.022006] (-) TimerEvent: {}
+[2.122761] (-) TimerEvent: {}
+[2.223434] (-) TimerEvent: {}
+[2.324038] (-) TimerEvent: {}
+[2.424606] (-) TimerEvent: {}
+[2.526331] (-) TimerEvent: {}
+[2.627934] (-) TimerEvent: {}
+[2.731272] (-) TimerEvent: {}
+[2.834868] (-) TimerEvent: {}
+[2.935551] (-) TimerEvent: {}
+[3.039558] (-) TimerEvent: {}
+[3.140123] (-) TimerEvent: {}
+[3.240717] (-) TimerEvent: {}
+[3.342710] (-) TimerEvent: {}
+[3.448613] (-) TimerEvent: {}
+[3.549260] (-) TimerEvent: {}
+[3.650383] (-) TimerEvent: {}
+[3.752141] (-) TimerEvent: {}
+[3.767510] (navigation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/navigation', 'build', '--build-base', '/home/TASC/AN_WS/build/navigation/build', 'install', '--record', '/home/TASC/AN_WS/build/navigation/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/TASC/AN_WS/src/navigation', 'env': {'HOSTNAME': 'mnt-desktop', 'GIT_ASKPASS': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/helpers/browser.sh', 'HOME': '/root', 'OLDPWD': '/home/TASC', 'TERM_PROGRAM_VERSION': '1.102.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-c693f250-9374-47cf-9eb4-e5b6cebd2b31.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/home/TASC/AN_WS/install:/home/TASC/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock","/tmp/.X11-unix/X1","/root/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-2be1254796.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock', 'AMENT_PREFIX_PATH': '/home/TASC/AN_WS/install/nova_vision:/home/TASC/AN_WS/install/nova_sensors:/home/TASC/AN_WS/install/navigation:/home/TASC/AN_WS/install/cam_stream:/home/TASC/install/nova_vision:/home/TASC/install/nova_sensors:/home/TASC/install/navigation:/home/TASC/install/cam_stream:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X1', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/TASC/AN_WS/build/navigation', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/TASC/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/TASC/install/nova_vision/lib/python3.10/site-packages:/home/TASC/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/install/navigation/lib/python3.10/site-packages:/home/TASC/install/cam_stream/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.841477] (cam_stream) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/cam_stream', 'build', '--build-base', '/home/TASC/AN_WS/build/cam_stream/build', 'install', '--record', '/home/TASC/AN_WS/build/cam_stream/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/TASC/AN_WS/src/cam_stream', 'env': {'HOSTNAME': 'mnt-desktop', 'GIT_ASKPASS': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/helpers/browser.sh', 'HOME': '/root', 'OLDPWD': '/home/TASC', 'TERM_PROGRAM_VERSION': '1.102.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-c693f250-9374-47cf-9eb4-e5b6cebd2b31.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/home/TASC/AN_WS/install:/home/TASC/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock","/tmp/.X11-unix/X1","/root/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-2be1254796.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock', 'AMENT_PREFIX_PATH': '/home/TASC/AN_WS/install/nova_vision:/home/TASC/AN_WS/install/nova_sensors:/home/TASC/AN_WS/install/navigation:/home/TASC/AN_WS/install/cam_stream:/home/TASC/install/nova_vision:/home/TASC/install/nova_sensors:/home/TASC/install/navigation:/home/TASC/install/cam_stream:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X1', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/TASC/AN_WS/build/cam_stream', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/TASC/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/TASC/install/nova_vision/lib/python3.10/site-packages:/home/TASC/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/install/navigation/lib/python3.10/site-packages:/home/TASC/install/cam_stream/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.853488] (-) TimerEvent: {}
+[3.910651] (nova_sensors) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/nova_sensors', 'build', '--build-base', '/home/TASC/AN_WS/build/nova_sensors/build', 'install', '--record', '/home/TASC/AN_WS/build/nova_sensors/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/TASC/AN_WS/nova_sensors', 'env': {'HOSTNAME': 'mnt-desktop', 'GIT_ASKPASS': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/helpers/browser.sh', 'HOME': '/root', 'OLDPWD': '/home/TASC', 'TERM_PROGRAM_VERSION': '1.102.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-c693f250-9374-47cf-9eb4-e5b6cebd2b31.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/home/TASC/AN_WS/install:/home/TASC/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock","/tmp/.X11-unix/X1","/root/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-2be1254796.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock', 'AMENT_PREFIX_PATH': '/home/TASC/AN_WS/install/nova_vision:/home/TASC/AN_WS/install/nova_sensors:/home/TASC/AN_WS/install/navigation:/home/TASC/AN_WS/install/cam_stream:/home/TASC/install/nova_vision:/home/TASC/install/nova_sensors:/home/TASC/install/navigation:/home/TASC/install/cam_stream:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X1', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/TASC/AN_WS/build/nova_sensors', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/TASC/AN_WS/build/nova_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/TASC/install/nova_vision/lib/python3.10/site-packages:/home/TASC/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/install/navigation/lib/python3.10/site-packages:/home/TASC/install/cam_stream/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.953733] (-) TimerEvent: {}
+[4.055908] (-) TimerEvent: {}
+[4.158349] (-) TimerEvent: {}
+[4.266905] (-) TimerEvent: {}
+[4.275757] (nova_vision) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/nova_vision', 'build', '--build-base', '/home/TASC/AN_WS/build/nova_vision/build', 'install', '--record', '/home/TASC/AN_WS/build/nova_vision/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/TASC/AN_WS/nova_vision', 'env': {'HOSTNAME': 'mnt-desktop', 'GIT_ASKPASS': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/helpers/browser.sh', 'HOME': '/root', 'OLDPWD': '/home/TASC', 'TERM_PROGRAM_VERSION': '1.102.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-c693f250-9374-47cf-9eb4-e5b6cebd2b31.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/home/TASC/AN_WS/install:/home/TASC/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/root/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock","/tmp/.X11-unix/X1","/root/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-2be1254796.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-750edc69-4965-4dc3-971a-1ad451a9b9f9.sock', 'AMENT_PREFIX_PATH': '/home/TASC/AN_WS/install/nova_vision:/home/TASC/AN_WS/install/nova_sensors:/home/TASC/AN_WS/install/navigation:/home/TASC/AN_WS/install/cam_stream:/home/TASC/install/nova_vision:/home/TASC/install/nova_sensors:/home/TASC/install/navigation:/home/TASC/install/cam_stream:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X1', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/TASC/AN_WS/build/nova_vision', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/TASC/AN_WS/build/nova_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/TASC/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages:/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/TASC/install/nova_vision/lib/python3.10/site-packages:/home/TASC/install/nova_sensors/lib/python3.10/site-packages:/home/TASC/install/navigation/lib/python3.10/site-packages:/home/TASC/install/cam_stream/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[4.371626] (-) TimerEvent: {}
+[4.472612] (-) TimerEvent: {}
+[4.576410] (-) TimerEvent: {}
+[4.677114] (-) TimerEvent: {}
+[4.780412] (-) TimerEvent: {}
+[4.805598] (nova_sensors) StdoutLine: {'line': b'running egg_info\n'}
+[4.807311] (nova_sensors) StdoutLine: {'line': b'writing ../build/nova_sensors/nova_sensors.egg-info/PKG-INFO\n'}
+[4.811759] (nova_sensors) StdoutLine: {'line': b'writing dependency_links to ../build/nova_sensors/nova_sensors.egg-info/dependency_links.txt\n'}
+[4.818199] (nova_sensors) StdoutLine: {'line': b'writing entry points to ../build/nova_sensors/nova_sensors.egg-info/entry_points.txt\n'}
+[4.825292] (nova_sensors) StdoutLine: {'line': b'writing requirements to ../build/nova_sensors/nova_sensors.egg-info/requires.txt\n'}
+[4.828763] (nova_sensors) StdoutLine: {'line': b'writing top-level names to ../build/nova_sensors/nova_sensors.egg-info/top_level.txt\n'}
+[4.841721] (nova_sensors) StdoutLine: {'line': b"reading manifest file '../build/nova_sensors/nova_sensors.egg-info/SOURCES.txt'\n"}
+[4.842199] (nova_sensors) StdoutLine: {'line': b"writing manifest file '../build/nova_sensors/nova_sensors.egg-info/SOURCES.txt'\n"}
+[4.842344] (nova_sensors) StdoutLine: {'line': b'running build\n'}
+[4.842470] (nova_sensors) StdoutLine: {'line': b'running build_py\n'}
+[4.842604] (nova_sensors) StdoutLine: {'line': b'running install\n'}
+[4.842700] (nova_sensors) StdoutLine: {'line': b'running install_lib\n'}
+[4.852503] (nova_sensors) StdoutLine: {'line': b'running install_data\n'}
+[4.853185] (nova_sensors) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.860925] (nova_sensors) StdoutLine: {'line': b"removing '/home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages/nova_sensors-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.861542] (nova_sensors) StdoutLine: {'line': b'Copying ../build/nova_sensors/nova_sensors.egg-info to /home/TASC/AN_WS/install/nova_sensors/lib/python3.10/site-packages/nova_sensors-0.0.0-py3.10.egg-info\n'}
+[4.868592] (nova_sensors) StdoutLine: {'line': b'running install_scripts\n'}
+[4.874730] (navigation) StdoutLine: {'line': b'running egg_info\n'}
+[4.876166] (navigation) StdoutLine: {'line': b'writing ../../build/navigation/navigation.egg-info/PKG-INFO\n'}
+[4.876512] (navigation) StdoutLine: {'line': b'writing dependency_links to ../../build/navigation/navigation.egg-info/dependency_links.txt\n'}
+[4.879658] (navigation) StdoutLine: {'line': b'writing entry points to ../../build/navigation/navigation.egg-info/entry_points.txt\n'}
+[4.880060] (navigation) StdoutLine: {'line': b'writing requirements to ../../build/navigation/navigation.egg-info/requires.txt\n'}
+[4.880231] (navigation) StdoutLine: {'line': b'writing top-level names to ../../build/navigation/navigation.egg-info/top_level.txt\n'}
+[4.880425] (-) TimerEvent: {}
+[4.883173] (navigation) StdoutLine: {'line': b"reading manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[4.886169] (navigation) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[4.888115] (navigation) StdoutLine: {'line': b"writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[4.889601] (navigation) StdoutLine: {'line': b'running build\n'}
+[4.889991] (navigation) StdoutLine: {'line': b'running build_py\n'}
+[4.890147] (navigation) StdoutLine: {'line': b'copying navigation/combined_gps_aruco_node.py -> /home/TASC/AN_WS/build/navigation/build/lib/navigation\n'}
+[4.894631] (navigation) StdoutLine: {'line': b'running install\n'}
+[4.895094] (navigation) StdoutLine: {'line': b'running install_lib\n'}
+[4.897567] (navigation) StdoutLine: {'line': b'copying /home/TASC/AN_WS/build/navigation/build/lib/navigation/combined_gps_aruco_node.py -> /home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation\n'}
+[4.898767] (navigation) StdoutLine: {'line': b'byte-compiling /home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation/combined_gps_aruco_node.py to combined_gps_aruco_node.cpython-310.pyc\n'}
+[4.905164] (navigation) StdoutLine: {'line': b'running install_data\n'}
+[4.905769] (navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.914609] (navigation) StdoutLine: {'line': b"removing '/home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.916865] (navigation) StdoutLine: {'line': b'Copying ../../build/navigation/navigation.egg-info to /home/TASC/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info\n'}
+[4.920485] (navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[4.967612] (nova_sensors) StdoutLine: {'line': b'Installing gps_node = nova_sensors.gps_node:mainimu_node script to /home/TASC/AN_WS/install/nova_sensors/lib/nova_sensors\n'}
+[4.971957] (nova_sensors) StdoutLine: {'line': b"writing list of installed files to '/home/TASC/AN_WS/build/nova_sensors/install.log'\n"}
+[4.973670] (cam_stream) StdoutLine: {'line': b'running egg_info\n'}
+[4.976697] (cam_stream) StdoutLine: {'line': b'writing ../../build/cam_stream/cam_stream.egg-info/PKG-INFO\n'}
+[4.979162] (cam_stream) StdoutLine: {'line': b'writing dependency_links to ../../build/cam_stream/cam_stream.egg-info/dependency_links.txt\n'}
+[4.981034] (cam_stream) StdoutLine: {'line': b'writing entry points to ../../build/cam_stream/cam_stream.egg-info/entry_points.txt\n'}
+[4.981646] (-) TimerEvent: {}
+[4.983680] (cam_stream) StdoutLine: {'line': b'writing requirements to ../../build/cam_stream/cam_stream.egg-info/requires.txt\n'}
+[4.985900] (cam_stream) StdoutLine: {'line': b'writing top-level names to ../../build/cam_stream/cam_stream.egg-info/top_level.txt\n'}
+[4.995348] (cam_stream) StdoutLine: {'line': b"reading manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'\n"}
+[4.996408] (navigation) StdoutLine: {'line': b'Installing aruco_marker_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.003030] (navigation) StdoutLine: {'line': b'Installing camera_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.003307] (navigation) StdoutLine: {'line': b'Installing camera_subscriber script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.003742] (navigation) StdoutLine: {'line': b'Installing combined_gps_aruco script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.003968] (navigation) StdoutLine: {'line': b'Installing gps_display script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.004126] (navigation) StdoutLine: {'line': b'Installing gps_node script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.004256] (navigation) StdoutLine: {'line': b'Installing gst_pub script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.004385] (navigation) StdoutLine: {'line': b'Installing multi_camera_publisher script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.004706] (navigation) StdoutLine: {'line': b'Installing multi_camera_publisher_gst script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.008704] (navigation) StdoutLine: {'line': b'Installing multi_camera_subscriber_gst script to /home/TASC/AN_WS/install/navigation/lib/navigation\n'}
+[5.008979] (navigation) StdoutLine: {'line': b"writing list of installed files to '/home/TASC/AN_WS/build/navigation/install.log'\n"}
+[5.011954] (cam_stream) StdoutLine: {'line': b"writing manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'\n"}
+[5.012331] (cam_stream) StdoutLine: {'line': b'running build\n'}
+[5.012535] (cam_stream) StdoutLine: {'line': b'running build_py\n'}
+[5.012794] (cam_stream) StdoutLine: {'line': b'running install\n'}
+[5.013029] (cam_stream) StdoutLine: {'line': b'running install_lib\n'}
+[5.027863] (cam_stream) StdoutLine: {'line': b'running install_data\n'}
+[5.028415] (cam_stream) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.048061] (cam_stream) StdoutLine: {'line': b"removing '/home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.053068] (cam_stream) StdoutLine: {'line': b'Copying ../../build/cam_stream/cam_stream.egg-info to /home/TASC/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info\n'}
+[5.063582] (cam_stream) StdoutLine: {'line': b'running install_scripts\n'}
+[5.081881] (-) TimerEvent: {}
+[5.146578] (navigation) CommandEnded: {'returncode': 0}
+[5.197127] (-) TimerEvent: {}
+[5.198761] (cam_stream) StdoutLine: {'line': b'Installing multi_camera_publisher script to /home/TASC/AN_WS/install/cam_stream/lib/cam_stream\n'}
+[5.199372] (cam_stream) StdoutLine: {'line': b'Installing multi_camera_subscriber script to /home/TASC/AN_WS/install/cam_stream/lib/cam_stream\n'}
+[5.201804] (cam_stream) StdoutLine: {'line': b"writing list of installed files to '/home/TASC/AN_WS/build/cam_stream/install.log'\n"}
+[5.222829] (navigation) JobEnded: {'identifier': 'navigation', 'rc': 0}
+[5.233214] (nova_sensors) CommandEnded: {'returncode': 0}
+[5.275485] (nova_sensors) JobEnded: {'identifier': 'nova_sensors', 'rc': 0}
+[5.297387] (-) TimerEvent: {}
+[5.393723] (cam_stream) CommandEnded: {'returncode': 0}
+[5.398644] (-) TimerEvent: {}
+[5.409355] (nova_vision) StdoutLine: {'line': b'running egg_info\n'}
+[5.410115] (nova_vision) StdoutLine: {'line': b'writing ../build/nova_vision/nova_vision.egg-info/PKG-INFO\n'}
+[5.410336] (nova_vision) StdoutLine: {'line': b'writing dependency_links to ../build/nova_vision/nova_vision.egg-info/dependency_links.txt\n'}
+[5.422576] (nova_vision) StdoutLine: {'line': b'writing entry points to ../build/nova_vision/nova_vision.egg-info/entry_points.txt\n'}
+[5.423074] (nova_vision) StdoutLine: {'line': b'writing requirements to ../build/nova_vision/nova_vision.egg-info/requires.txt\n'}
+[5.423297] (nova_vision) StdoutLine: {'line': b'writing top-level names to ../build/nova_vision/nova_vision.egg-info/top_level.txt\n'}
+[5.423492] (nova_vision) StdoutLine: {'line': b"reading manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'\n"}
+[5.423694] (nova_vision) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[5.426946] (nova_vision) StdoutLine: {'line': b"writing manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'\n"}
+[5.430650] (nova_vision) StdoutLine: {'line': b'running build\n'}
+[5.431043] (nova_vision) StdoutLine: {'line': b'running build_py\n'}
+[5.431253] (nova_vision) StdoutLine: {'line': b'running install\n'}
+[5.434532] (nova_vision) StdoutLine: {'line': b'running install_lib\n'}
+[5.440208] (nova_vision) StdoutLine: {'line': b'running install_data\n'}
+[5.451307] (nova_vision) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.455102] (nova_vision) StdoutLine: {'line': b"removing '/home/TASC/AN_WS/install/nova_vision/lib/python3.10/site-packages/nova_vision-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.455594] (nova_vision) StdoutLine: {'line': b'Copying ../build/nova_vision/nova_vision.egg-info to /home/TASC/AN_WS/install/nova_vision/lib/python3.10/site-packages/nova_vision-0.0.0-py3.10.egg-info\n'}
+[5.468672] (nova_vision) StdoutLine: {'line': b'running install_scripts\n'}
+[5.477377] (cam_stream) JobEnded: {'identifier': 'cam_stream', 'rc': 0}
+[5.498781] (-) TimerEvent: {}
+[5.537372] (nova_vision) StdoutLine: {'line': b'Installing aruco_detect script to /home/TASC/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.540647] (nova_vision) StdoutLine: {'line': b'Installing camera_publisher script to /home/TASC/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.542538] (nova_vision) StdoutLine: {'line': b'Installing camera_subscriber script to /home/TASC/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.542948] (nova_vision) StdoutLine: {'line': b'Installing gps_aruco script to /home/TASC/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.543233] (nova_vision) StdoutLine: {'line': b'Installing gps_display script to /home/TASC/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.545517] (nova_vision) StdoutLine: {'line': b'Installing gps_node script to /home/TASC/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.548726] (nova_vision) StdoutLine: {'line': b'Installing multi_camera_publisher script to /home/TASC/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.550327] (nova_vision) StdoutLine: {'line': b'Installing object_tracker script to /home/TASC/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.550672] (nova_vision) StdoutLine: {'line': b"writing list of installed files to '/home/TASC/AN_WS/build/nova_vision/install.log'\n"}
+[5.601853] (-) TimerEvent: {}
+[5.692536] (nova_vision) CommandEnded: {'returncode': 0}
+[5.701156] (-) TimerEvent: {}
+[5.734298] (nova_vision) JobEnded: {'identifier': 'nova_vision', 'rc': 0}
+[5.739029] (-) EventReactorShutdown: {}
