@@ -1,0 +1,181 @@
+[0.000000] (-) TimerEvent: {}
+[0.003166] (cam_stream) JobQueued: {'identifier': 'cam_stream', 'dependencies': OrderedDict()}
+[0.003364] (navigation) JobQueued: {'identifier': 'navigation', 'dependencies': OrderedDict()}
+[0.003427] (nova_sensors) JobQueued: {'identifier': 'nova_sensors', 'dependencies': OrderedDict()}
+[0.003487] (nova_vision) JobQueued: {'identifier': 'nova_vision', 'dependencies': OrderedDict()}
+[0.003547] (cam_stream) JobStarted: {'identifier': 'cam_stream'}
+[0.034070] (navigation) JobStarted: {'identifier': 'navigation'}
+[0.077501] (nova_sensors) JobStarted: {'identifier': 'nova_sensors'}
+[0.101111] (-) TimerEvent: {}
+[0.125057] (nova_vision) JobStarted: {'identifier': 'nova_vision'}
+[0.202482] (-) TimerEvent: {}
+[0.307368] (-) TimerEvent: {}
+[0.408181] (-) TimerEvent: {}
+[0.508938] (-) TimerEvent: {}
+[0.612732] (-) TimerEvent: {}
+[0.713773] (-) TimerEvent: {}
+[0.816808] (-) TimerEvent: {}
+[0.919174] (-) TimerEvent: {}
+[1.020816] (-) TimerEvent: {}
+[1.123415] (-) TimerEvent: {}
+[1.224129] (-) TimerEvent: {}
+[1.325574] (-) TimerEvent: {}
+[1.428370] (-) TimerEvent: {}
+[1.531731] (-) TimerEvent: {}
+[1.637978] (-) TimerEvent: {}
+[1.740790] (-) TimerEvent: {}
+[1.841985] (-) TimerEvent: {}
+[1.943322] (-) TimerEvent: {}
+[2.046021] (-) TimerEvent: {}
+[2.147276] (-) TimerEvent: {}
+[2.247907] (-) TimerEvent: {}
+[2.349434] (-) TimerEvent: {}
+[2.451750] (-) TimerEvent: {}
+[2.553971] (-) TimerEvent: {}
+[2.656711] (-) TimerEvent: {}
+[2.759415] (-) TimerEvent: {}
+[2.864598] (-) TimerEvent: {}
+[2.966778] (-) TimerEvent: {}
+[3.070204] (-) TimerEvent: {}
+[3.175388] (-) TimerEvent: {}
+[3.276607] (-) TimerEvent: {}
+[3.380703] (-) TimerEvent: {}
+[3.482527] (-) TimerEvent: {}
+[3.589384] (-) TimerEvent: {}
+[3.691760] (-) TimerEvent: {}
+[3.798385] (-) TimerEvent: {}
+[3.899367] (-) TimerEvent: {}
+[4.003392] (navigation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/navigation', 'build', '--build-base', '/home/moon/AN_WS/build/navigation/build', 'install', '--record', '/home/moon/AN_WS/build/navigation/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/moon/AN_WS/src/navigation', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'moon', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/moon', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2025', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/moon/AN_WS/install:/home/moon/gps_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'moon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'moon', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/moon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/moon-virtual-machine:@/tmp/.ICE-unix/1139,unix/moon-virtual-machine:/tmp/.ICE-unix/1139', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/opt/ros/humble/share/fastrtps/fastrtps_deprecated_profiles.xml', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e7937e73_9dea_4b76_9804_e14963021a6c', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.BOLW92', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/moon/AN_WS/install/nova_vision:/home/moon/AN_WS/install/nova_sensors:/home/moon/AN_WS/install/navigation:/home/moon/AN_WS/install/cam_stream:/home/moon/gps_ws/install/gps_package:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/moon/AN_WS/build/navigation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/moon/AN_WS/build/navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/moon/gps_ws/install/gps_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[4.008096] (-) TimerEvent: {}
+[4.114046] (-) TimerEvent: {}
+[4.220415] (-) TimerEvent: {}
+[4.302616] (nova_vision) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/nova_vision', 'build', '--build-base', '/home/moon/AN_WS/build/nova_vision/build', 'install', '--record', '/home/moon/AN_WS/build/nova_vision/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/moon/AN_WS/nova_vision', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'moon', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/moon', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2025', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/moon/AN_WS/install:/home/moon/gps_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'moon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'moon', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/moon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/moon-virtual-machine:@/tmp/.ICE-unix/1139,unix/moon-virtual-machine:/tmp/.ICE-unix/1139', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/opt/ros/humble/share/fastrtps/fastrtps_deprecated_profiles.xml', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e7937e73_9dea_4b76_9804_e14963021a6c', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.BOLW92', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/moon/AN_WS/install/nova_vision:/home/moon/AN_WS/install/nova_sensors:/home/moon/AN_WS/install/navigation:/home/moon/AN_WS/install/cam_stream:/home/moon/gps_ws/install/gps_package:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/moon/AN_WS/build/nova_vision', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/moon/AN_WS/build/nova_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/moon/gps_ws/install/gps_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[4.329636] (-) TimerEvent: {}
+[4.436330] (-) TimerEvent: {}
+[4.465913] (nova_sensors) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/nova_sensors', 'build', '--build-base', '/home/moon/AN_WS/build/nova_sensors/build', 'install', '--record', '/home/moon/AN_WS/build/nova_sensors/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/moon/AN_WS/nova_sensors', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'moon', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/moon', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2025', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/moon/AN_WS/install:/home/moon/gps_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'moon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'moon', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/moon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/moon-virtual-machine:@/tmp/.ICE-unix/1139,unix/moon-virtual-machine:/tmp/.ICE-unix/1139', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/opt/ros/humble/share/fastrtps/fastrtps_deprecated_profiles.xml', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e7937e73_9dea_4b76_9804_e14963021a6c', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.BOLW92', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/moon/AN_WS/install/nova_vision:/home/moon/AN_WS/install/nova_sensors:/home/moon/AN_WS/install/navigation:/home/moon/AN_WS/install/cam_stream:/home/moon/gps_ws/install/gps_package:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/moon/AN_WS/build/nova_sensors', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/moon/AN_WS/build/nova_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/moon/gps_ws/install/gps_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[4.538034] (-) TimerEvent: {}
+[4.602934] (cam_stream) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/cam_stream', 'build', '--build-base', '/home/moon/AN_WS/build/cam_stream/build', 'install', '--record', '/home/moon/AN_WS/build/cam_stream/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/moon/AN_WS/src/cam_stream', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'moon', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/moon', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2025', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/moon/AN_WS/install:/home/moon/gps_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'moon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'moon', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/moon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/moon-virtual-machine:@/tmp/.ICE-unix/1139,unix/moon-virtual-machine:/tmp/.ICE-unix/1139', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/opt/ros/humble/share/fastrtps/fastrtps_deprecated_profiles.xml', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e7937e73_9dea_4b76_9804_e14963021a6c', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.BOLW92', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/moon/AN_WS/install/nova_vision:/home/moon/AN_WS/install/nova_sensors:/home/moon/AN_WS/install/navigation:/home/moon/AN_WS/install/cam_stream:/home/moon/gps_ws/install/gps_package:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/moon/AN_WS/build/cam_stream', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/moon/AN_WS/build/cam_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages:/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages:/home/moon/gps_ws/install/gps_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[4.642115] (-) TimerEvent: {}
+[4.749834] (-) TimerEvent: {}
+[4.856776] (-) TimerEvent: {}
+[4.957866] (-) TimerEvent: {}
+[5.062436] (-) TimerEvent: {}
+[5.171378] (-) TimerEvent: {}
+[5.236558] (navigation) StdoutLine: {'line': b'running egg_info\n'}
+[5.244961] (navigation) StdoutLine: {'line': b'writing ../../build/navigation/navigation.egg-info/PKG-INFO\n'}
+[5.253923] (navigation) StdoutLine: {'line': b'writing dependency_links to ../../build/navigation/navigation.egg-info/dependency_links.txt\n'}
+[5.254313] (navigation) StdoutLine: {'line': b'writing entry points to ../../build/navigation/navigation.egg-info/entry_points.txt\n'}
+[5.254758] (navigation) StdoutLine: {'line': b'writing requirements to ../../build/navigation/navigation.egg-info/requires.txt\n'}
+[5.254933] (navigation) StdoutLine: {'line': b'writing top-level names to ../../build/navigation/navigation.egg-info/top_level.txt\n'}
+[5.273674] (navigation) StdoutLine: {'line': b"reading manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[5.274038] (-) TimerEvent: {}
+[5.274907] (navigation) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[5.277762] (navigation) StdoutLine: {'line': b"writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[5.281469] (navigation) StdoutLine: {'line': b'running build\n'}
+[5.281723] (navigation) StdoutLine: {'line': b'running build_py\n'}
+[5.291727] (navigation) StdoutLine: {'line': b'running install\n'}
+[5.292604] (navigation) StdoutLine: {'line': b'running install_lib\n'}
+[5.316136] (navigation) StdoutLine: {'line': b'running install_data\n'}
+[5.316552] (navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.330635] (navigation) StdoutLine: {'line': b"removing '/home/moon/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.339190] (navigation) StdoutLine: {'line': b'Copying ../../build/navigation/navigation.egg-info to /home/moon/AN_WS/install/navigation/lib/python3.10/site-packages/navigation-0.0.0-py3.10.egg-info\n'}
+[5.348550] (navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[5.374288] (-) TimerEvent: {}
+[5.412745] (navigation) StdoutLine: {'line': b'Installing aruco_marker_publisher script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.419326] (navigation) StdoutLine: {'line': b'Installing camera_publisher script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.419652] (navigation) StdoutLine: {'line': b'Installing camera_subscriber script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.421102] (navigation) StdoutLine: {'line': b'Installing combined_gps_aruco script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.423443] (navigation) StdoutLine: {'line': b'Installing gps_display script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.428352] (navigation) StdoutLine: {'line': b'Installing gps_node script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.431919] (navigation) StdoutLine: {'line': b'Installing gst_pub script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.434350] (navigation) StdoutLine: {'line': b'Installing multi_camera_publisher script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.437306] (navigation) StdoutLine: {'line': b'Installing multi_camera_publisher_gst script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.441369] (navigation) StdoutLine: {'line': b'Installing multi_camera_subscriber_gst script to /home/moon/AN_WS/install/navigation/lib/navigation\n'}
+[5.446909] (navigation) StdoutLine: {'line': b"writing list of installed files to '/home/moon/AN_WS/build/navigation/install.log'\n"}
+[5.475205] (-) TimerEvent: {}
+[5.492755] (navigation) CommandEnded: {'returncode': 0}
+[5.578618] (navigation) JobEnded: {'identifier': 'navigation', 'rc': 0}
+[5.584897] (-) TimerEvent: {}
+[5.677199] (nova_sensors) StdoutLine: {'line': b'running egg_info\n'}
+[5.684202] (nova_sensors) StdoutLine: {'line': b'writing ../build/nova_sensors/nova_sensors.egg-info/PKG-INFO\n'}
+[5.694674] (-) TimerEvent: {}
+[5.701843] (nova_sensors) StdoutLine: {'line': b'writing dependency_links to ../build/nova_sensors/nova_sensors.egg-info/dependency_links.txt\n'}
+[5.702141] (nova_sensors) StdoutLine: {'line': b'writing entry points to ../build/nova_sensors/nova_sensors.egg-info/entry_points.txt\n'}
+[5.702370] (nova_sensors) StdoutLine: {'line': b'writing requirements to ../build/nova_sensors/nova_sensors.egg-info/requires.txt\n'}
+[5.702547] (nova_sensors) StdoutLine: {'line': b'writing top-level names to ../build/nova_sensors/nova_sensors.egg-info/top_level.txt\n'}
+[5.702721] (nova_sensors) StdoutLine: {'line': b"reading manifest file '../build/nova_sensors/nova_sensors.egg-info/SOURCES.txt'\n"}
+[5.702893] (nova_sensors) StdoutLine: {'line': b"writing manifest file '../build/nova_sensors/nova_sensors.egg-info/SOURCES.txt'\n"}
+[5.703065] (nova_sensors) StdoutLine: {'line': b'running build\n'}
+[5.703299] (nova_sensors) StdoutLine: {'line': b'running build_py\n'}
+[5.718930] (nova_sensors) StdoutLine: {'line': b'running install\n'}
+[5.719822] (nova_sensors) StdoutLine: {'line': b'running install_lib\n'}
+[5.720457] (nova_sensors) StdoutLine: {'line': b'running install_data\n'}
+[5.720953] (nova_sensors) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.743335] (nova_sensors) StdoutLine: {'line': b"removing '/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages/nova_sensors-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.743898] (nova_sensors) StdoutLine: {'line': b'Copying ../build/nova_sensors/nova_sensors.egg-info to /home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages/nova_sensors-0.0.0-py3.10.egg-info\n'}
+[5.751044] (nova_sensors) StdoutLine: {'line': b'running install_scripts\n'}
+[5.758106] (nova_vision) StdoutLine: {'line': b'running egg_info\n'}
+[5.762446] (nova_vision) StdoutLine: {'line': b'writing ../build/nova_vision/nova_vision.egg-info/PKG-INFO\n'}
+[5.765913] (nova_vision) StdoutLine: {'line': b'writing dependency_links to ../build/nova_vision/nova_vision.egg-info/dependency_links.txt\n'}
+[5.772082] (nova_vision) StdoutLine: {'line': b'writing entry points to ../build/nova_vision/nova_vision.egg-info/entry_points.txt\n'}
+[5.772800] (nova_vision) StdoutLine: {'line': b'writing requirements to ../build/nova_vision/nova_vision.egg-info/requires.txt\n'}
+[5.776842] (nova_vision) StdoutLine: {'line': b'writing top-level names to ../build/nova_vision/nova_vision.egg-info/top_level.txt\n'}
+[5.784488] (nova_vision) StdoutLine: {'line': b"reading manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'\n"}
+[5.786913] (nova_vision) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[5.793672] (nova_vision) StdoutLine: {'line': b"writing manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'\n"}
+[5.794145] (-) TimerEvent: {}
+[5.799467] (nova_vision) StdoutLine: {'line': b'running build\n'}
+[5.799869] (nova_vision) StdoutLine: {'line': b'running build_py\n'}
+[5.800136] (nova_vision) StdoutLine: {'line': b'running install\n'}
+[5.800456] (nova_vision) StdoutLine: {'line': b'running install_lib\n'}
+[5.810205] (nova_vision) StdoutLine: {'line': b'running install_data\n'}
+[5.810619] (nova_vision) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.810803] (nova_sensors) StdoutLine: {'line': b'Installing gps_node = nova_sensors.gps_node:mainimu_node script to /home/moon/AN_WS/install/nova_sensors/lib/nova_sensors\n'}
+[5.817493] (nova_sensors) StdoutLine: {'line': b"writing list of installed files to '/home/moon/AN_WS/build/nova_sensors/install.log'\n"}
+[5.824518] (nova_vision) StdoutLine: {'line': b"removing '/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages/nova_vision-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.836873] (nova_vision) StdoutLine: {'line': b'Copying ../build/nova_vision/nova_vision.egg-info to /home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages/nova_vision-0.0.0-py3.10.egg-info\n'}
+[5.844961] (nova_vision) StdoutLine: {'line': b'running install_scripts\n'}
+[5.868562] (nova_sensors) CommandEnded: {'returncode': 0}
+[5.894410] (-) TimerEvent: {}
+[5.908517] (nova_sensors) JobEnded: {'identifier': 'nova_sensors', 'rc': 0}
+[5.912739] (cam_stream) StdoutLine: {'line': b'running egg_info\n'}
+[5.918010] (cam_stream) StdoutLine: {'line': b'writing ../../build/cam_stream/cam_stream.egg-info/PKG-INFO\n'}
+[5.919534] (cam_stream) StdoutLine: {'line': b'writing dependency_links to ../../build/cam_stream/cam_stream.egg-info/dependency_links.txt\n'}
+[5.919759] (cam_stream) StdoutLine: {'line': b'writing entry points to ../../build/cam_stream/cam_stream.egg-info/entry_points.txt\n'}
+[5.922045] (cam_stream) StdoutLine: {'line': b'writing requirements to ../../build/cam_stream/cam_stream.egg-info/requires.txt\n'}
+[5.922314] (cam_stream) StdoutLine: {'line': b'writing top-level names to ../../build/cam_stream/cam_stream.egg-info/top_level.txt\n'}
+[5.925537] (cam_stream) StdoutLine: {'line': b"reading manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'\n"}
+[5.930899] (cam_stream) StdoutLine: {'line': b"writing manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'\n"}
+[5.931420] (cam_stream) StdoutLine: {'line': b'running build\n'}
+[5.933061] (cam_stream) StdoutLine: {'line': b'running build_py\n'}
+[5.938549] (cam_stream) StdoutLine: {'line': b'copying cam_stream/multi_cam_gps_aruco.py -> /home/moon/AN_WS/build/cam_stream/build/lib/cam_stream\n'}
+[5.941162] (cam_stream) StdoutLine: {'line': b'running install\n'}
+[5.941494] (cam_stream) StdoutLine: {'line': b'running install_lib\n'}
+[5.951774] (cam_stream) StdoutLine: {'line': b'copying /home/moon/AN_WS/build/cam_stream/build/lib/cam_stream/multi_cam_gps_aruco.py -> /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream\n'}
+[5.954295] (cam_stream) StdoutLine: {'line': b'byte-compiling /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_cam_gps_aruco.py to multi_cam_gps_aruco.cpython-310.pyc\n'}
+[5.954548] (nova_vision) StdoutLine: {'line': b'Installing aruco_detect script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.956936] (nova_vision) StdoutLine: {'line': b'Installing camera_publisher script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.957198] (nova_vision) StdoutLine: {'line': b'Installing camera_subscriber script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.959166] (nova_vision) StdoutLine: {'line': b'Installing gps_aruco script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.960453] (nova_vision) StdoutLine: {'line': b'Installing gps_display script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.960642] (nova_vision) StdoutLine: {'line': b'Installing gps_node script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.960812] (nova_vision) StdoutLine: {'line': b'Installing multi_camera_publisher script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.960978] (nova_vision) StdoutLine: {'line': b'Installing object_tracker script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision\n'}
+[5.961278] (nova_vision) StdoutLine: {'line': b"writing list of installed files to '/home/moon/AN_WS/build/nova_vision/install.log'\n"}
+[5.964999] (cam_stream) StdoutLine: {'line': b'running install_data\n'}
+[5.965204] (cam_stream) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.974143] (cam_stream) StdoutLine: {'line': b"removing '/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.976520] (cam_stream) StdoutLine: {'line': b'Copying ../../build/cam_stream/cam_stream.egg-info to /home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info\n'}
+[5.980086] (cam_stream) StdoutLine: {'line': b'running install_scripts\n'}
+[6.002348] (-) TimerEvent: {}
+[6.023843] (nova_vision) CommandEnded: {'returncode': 0}
+[6.045813] (cam_stream) StdoutLine: {'line': b'Installing gps_node script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream\n'}
+[6.048375] (cam_stream) StdoutLine: {'line': b'Installing multi_cam_gps_aruco script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream\n'}
+[6.053596] (cam_stream) StdoutLine: {'line': b'Installing multi_camera_publisher script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream\n'}
+[6.055085] (cam_stream) StdoutLine: {'line': b'Installing multi_camera_subscriber script to /home/moon/AN_WS/install/cam_stream/lib/cam_stream\n'}
+[6.055398] (cam_stream) StdoutLine: {'line': b"writing list of installed files to '/home/moon/AN_WS/build/cam_stream/install.log'\n"}
+[6.077648] (nova_vision) JobEnded: {'identifier': 'nova_vision', 'rc': 0}
+[6.092375] (cam_stream) CommandEnded: {'returncode': 0}
+[6.104355] (-) TimerEvent: {}
+[6.113107] (cam_stream) JobEnded: {'identifier': 'cam_stream', 'rc': 0}
+[6.120147] (-) EventReactorShutdown: {}

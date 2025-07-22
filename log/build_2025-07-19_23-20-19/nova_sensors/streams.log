@@ -1,0 +1,21 @@
+[2.009s] Invoking command in '/home/moon/AN_WS/nova_sensors': PYTHONPATH=/home/moon/AN_WS/build/nova_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_sensors build --build-base /home/moon/AN_WS/build/nova_sensors/build install --record /home/moon/AN_WS/build/nova_sensors/install.log --single-version-externally-managed install_data
+[2.430s] running egg_info
+[2.433s] writing ../build/nova_sensors/nova_sensors.egg-info/PKG-INFO
+[2.435s] writing dependency_links to ../build/nova_sensors/nova_sensors.egg-info/dependency_links.txt
+[2.439s] writing entry points to ../build/nova_sensors/nova_sensors.egg-info/entry_points.txt
+[2.439s] writing requirements to ../build/nova_sensors/nova_sensors.egg-info/requires.txt
+[2.439s] writing top-level names to ../build/nova_sensors/nova_sensors.egg-info/top_level.txt
+[2.447s] reading manifest file '../build/nova_sensors/nova_sensors.egg-info/SOURCES.txt'
+[2.450s] writing manifest file '../build/nova_sensors/nova_sensors.egg-info/SOURCES.txt'
+[2.452s] running build
+[2.454s] running build_py
+[2.454s] running install
+[2.455s] running install_lib
+[2.459s] running install_data
+[2.463s] running install_egg_info
+[2.466s] removing '/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages/nova_sensors-0.0.0-py3.10.egg-info' (and everything under it)
+[2.511s] Copying ../build/nova_sensors/nova_sensors.egg-info to /home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages/nova_sensors-0.0.0-py3.10.egg-info
+[2.511s] running install_scripts
+[2.513s] Installing gps_node = nova_sensors.gps_node:mainimu_node script to /home/moon/AN_WS/install/nova_sensors/lib/nova_sensors
+[2.514s] writing list of installed files to '/home/moon/AN_WS/build/nova_sensors/install.log'
+[2.571s] Invoked command in '/home/moon/AN_WS/nova_sensors' returned '0': PYTHONPATH=/home/moon/AN_WS/build/nova_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_sensors build --build-base /home/moon/AN_WS/build/nova_sensors/build install --record /home/moon/AN_WS/build/nova_sensors/install.log --single-version-externally-managed install_data

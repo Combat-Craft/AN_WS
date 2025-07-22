@@ -1,0 +1,5 @@
+  File "/home/moon/AN_WS/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_cam_gps_aruco.py", line 157
+    self.get_logger().warn(f"Sample is None for cam {cam_id}"
+                          ^
+SyntaxError: '(' was never closed
+

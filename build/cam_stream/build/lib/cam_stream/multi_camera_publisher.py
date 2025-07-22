@@ -16,8 +16,14 @@ class MultiCameraPublisher(Node):
         self.camera_publishers = {}
         self.pipelines = {}
         self.cameras = {
+<<<<<<< HEAD
             0: {'device': 'v4l2src device=/dev/video4', 'topic': '/cam0/h264'},
             1: {'device': 'v4l2src device=/dev/video0', 'topic': '/cam1/h264'},
+=======
+            0: {'device': 'videotestsrc', 'topic': '/cam0/h264'},
+            1: {'device': 'videotestsrc', 'topic': '/cam1/h264'},
+            #2: {'device': '/dev/video4', 'topic': '/cam2/h264'}
+>>>>>>> refs/remotes/origin/main
         }
 
 
@@ -30,7 +36,7 @@ class MultiCameraPublisher(Node):
         pipeline_str = (
             f"{device} ! "
             "video/x-raw,width=640,height=480,framerate=30/1 ! "
-            "videoconvert ! x264enc tune=zerolatency bitrate=500 speed-preset=ultrafast ! "
+            "videoconvert ! x264enc tune=zerolatency bitrate=500 key-int-max=120 speed-preset=ultrafast ! "
             "video/x-h264,stream-format=byte-stream ! "
             "appsink name=sink emit-signals=True sync=false max-buffers=1 drop=true"
         )

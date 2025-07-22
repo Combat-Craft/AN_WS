@@ -26,7 +26,7 @@ setup(
         'console_scripts': [
             'multi_camera_publisher = cam_stream.multi_camera_publisher:main',
             'multi_camera_subscriber = cam_stream.multi_camera_subscriber:main',
-            'multi_cam_gps_aruco = cam_stream.multi_camera_subscriber:main'
+            'multi_cam_gps_aruco = cam_stream.multi_cam_gps_aruco:main',
             'gps_node = cam_stream.gps_node:main'
         ],
     },
