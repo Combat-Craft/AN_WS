@@ -14,17 +14,18 @@ class MultiCameraSubscriber(Node):
         super().__init__('multi_camera_subscriber')
         Gst.init(None)
 
+
         # Define camera topics
         self.cameras = {
             0: '/cam0/h264',
-            1: '/cam1/h264',
-            #2: '/cam2/h264',
+            1: '/cam1/h264'
         }
+
 
         self.pipelines = {}
         self.appsrcs = {}
         self.appsinks = {}
-        self.frames = {0: None, 1: None}#, 2: None
+        self.frames = {0: None, 1: None}
 
 
         for cam_id, topic in self.cameras.items():
@@ -32,10 +33,18 @@ class MultiCameraSubscriber(Node):
             self.create_subscription(CompressedImage, topic, lambda msg, cid=cam_id: self.image_callback(msg, cid), 10)
 
 
+        # OpenCV display loop in background
+        self.display_thread = threading.Thread(target=self.display_loop, daemon=True)
+        self.display_thread.start()
+
+
+        self.get_logger().info('Multi-camera H264 subscriber started.')
+
+
     def setup_pipeline(self, cam_id):
         decoder = "nvh264dec ! videoconvert" if self.has_cuda() else "avdec_h264 ! videoconvert"
         pipeline_str = (
-            f"appsrc name=mysrc_{cam_id} is-live=true block=true format=time ! "
+            f"appsrc name=mysrc_{cam_id} is-live=true block=true format=time caps=video/x-h264,stream-format=byte-stream ! "
             f"h264parse ! {decoder} ! "
             "video/x-raw,format=BGR ! "
             f"appsink name=mysink_{cam_id} emit-signals=true sync=false max-buffers=1 drop=true"
@@ -86,9 +95,7 @@ class MultiCameraSubscriber(Node):
 
 
     def display_loop(self):
-        frame_counter=0
         while rclpy.ok():
-            frame_counter +=1
             if all(frame is not None for frame in self.frames.values()):
                 try:
                     resized = [cv2.resize(self.frames[cid], (320, 240)) for cid in self.cameras.keys()]
@@ -99,7 +106,7 @@ class MultiCameraSubscriber(Node):
                 except Exception as e:
                     self.get_logger().warn(f"Display error: {e}")
             else:
-                if frame_counter%100000==0: print(f"Waiting for frames...{frame_counter} ")
+                print("Waiting for frames...")
                 pass
         cv2.destroyAllWindows()
 
@@ -125,5 +132,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
-
