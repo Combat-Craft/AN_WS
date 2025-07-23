@@ -1,52 +1,49 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import CompressedImage
+from foxglove_msgs.msg import CompressedVideo
 import gi
-from functools import partial
+
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst
 
 
-class MultiCameraPublisher(Node):
+class MultiCameraH264Publisher(Node):
     def __init__(self):
-        super().__init__('multi_camera_publisher')
+        super().__init__('multi_camera_h264_publisher')
         Gst.init(None)
 
+        # Cameras with device paths and ROS topics
+        self.cameras = {
+            0: {'device': '/dev/video2', 'topic': '/cam0/h264'},
+            1: {'device': '/dev/video0', 'topic': '/cam1/h264'},
+        }
 
         self.camera_publishers = {}
         self.pipelines = {}
-        self.cameras = {
-            0: {'device': 'v4l2src device=/dev/video4', 'topic': '/cam0/h264'},
-            1: {'device': 'v4l2src device=/dev/video0', 'topic': '/cam1/h264'},
-        }
-
 
         for cam_id, config in self.cameras.items():
-            self.camera_publishers[cam_id] = self.create_publisher(CompressedImage, config['topic'], 10)
+            self.camera_publishers[cam_id] = self.create_publisher(
+                CompressedVideo, config['topic'], 10
+            )
             self.setup_pipeline(cam_id, config['device'])
-
-
 
     def setup_pipeline(self, cam_id, device):
         pipeline_str = (
-            f"{device} ! "
-            f"{device} ! "
+            f"v4l2src device={device} ! "
             "video/x-raw,width=640,height=480,framerate=30/1 ! "
-            "videoconvert ! x264enc tune=zerolatency bitrate=500 key-int-max=120 speed-preset=ultrafast ! "
-            "video/x-h264,stream-format=byte-stream ! "
+            "videoconvert ! "
+            "x264enc tune=zerolatency speed-preset=ultrafast key-int-max=30 insert-vui=true ! "
+            "video/x-h264,stream-format=byte-stream,alignment=au ! "
             "appsink name=sink emit-signals=True sync=false max-buffers=1 drop=true"
         )
 
-
         pipeline = Gst.parse_launch(pipeline_str)
         sink = pipeline.get_by_name('sink')
-        sink.connect('new-sample', lambda sink: self.on_new_sample(sink, cam_id))
-
+        sink.connect('new-sample', lambda sink, cam=cam_id: self.on_new_sample(sink, cam))
 
         pipeline.set_state(Gst.State.PLAYING)
         self.pipelines[cam_id] = pipeline
-        self.get_logger().info(f"Started pipeline for camera {cam_id}")
-
+        self.get_logger().info(f"Started pipeline for camera {cam_id} ({device})")
 
     def on_new_sample(self, sink, cam_id):
         sample = sink.emit('pull-sample')
@@ -55,18 +52,17 @@ class MultiCameraPublisher(Node):
 
         buf = sample.get_buffer()
         success, map_info = buf.map(Gst.MapFlags.READ)
-        if success:
-            self.get_logger().info(f"Cam{cam_id}: new sample, buffer size {map_info.size}")
-            msg = CompressedImage()
-            msg.header.stamp = self.get_clock().now().to_msg()
-            msg.format = "h264"
-            msg.data = map_info.data
-            self.camera_publishers[cam_id].publish(msg)
-            buf.unmap(map_info)
+        if not success:
+            return Gst.FlowReturn.ERROR
 
+        msg = CompressedVideo()
+        msg.timestamp = self.get_clock().now().to_msg()
+        msg.format = 'h264'
+        msg.data = map_info.data
+        self.camera_publishers[cam_id].publish(msg)
 
+        buf.unmap(map_info)
         return Gst.FlowReturn.OK
-
 
     def shutdown(self):
         for pipeline in self.pipelines.values():
@@ -75,7 +71,7 @@ class MultiCameraPublisher(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = MultiCameraPublisher()
+    node = MultiCameraH264Publisher()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
@@ -84,3 +80,7 @@ def main(args=None):
         node.shutdown()
         node.destroy_node()
         rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
