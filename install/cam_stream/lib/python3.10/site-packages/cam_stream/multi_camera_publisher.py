@@ -15,9 +15,9 @@ from gi.repository import Gst, GLib
 import gi.repository.GstBase as GstBase
 
 
-class MultiCameraH264Publisher(Node):
+class MultiCameraPublisher(Node):
     def __init__(self):
-        super().__init__('multi_camera_h264_publisher')
+        super().__init__('multi_camera_publisher')
         Gst.init(None)
 
         # ArUco setup
@@ -30,7 +30,7 @@ class MultiCameraH264Publisher(Node):
         self.detection_interval = self.get_parameter('detection_interval').value
 
         self.cameras = {
-            0: {'device': '/dev/video1', 'topic': '/cam0/h264'},
+            0: {'device': '/dev/video0', 'topic': '/cam0/h264'},
             1: {'device': '/dev/video2', 'topic': '/cam1/h264'},
         }
 
@@ -168,7 +168,7 @@ class MultiCameraH264Publisher(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = MultiCameraH264Publisher()
+    node = MultiCameraPublisher()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

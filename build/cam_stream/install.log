@@ -1,8 +1,10 @@
+/home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/sensors_node.py
 /home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/gps_node.py
 /home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_publisher.py
 /home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_cam_gps_aruco.py
 /home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/__init__.py
 /home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/multi_camera_subscriber.py
+/home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/__pycache__/sensors_node.cpython-310.pyc
 /home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/__pycache__/gps_node.cpython-310.pyc
 /home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/__pycache__/multi_camera_publisher.cpython-310.pyc
 /home/tasc/AN_WS-1/install/cam_stream/lib/python3.10/site-packages/cam_stream/__pycache__/multi_cam_gps_aruco.cpython-310.pyc
@@ -22,3 +24,4 @@
 /home/tasc/AN_WS-1/install/cam_stream/lib/cam_stream/multi_cam_gps_aruco
 /home/tasc/AN_WS-1/install/cam_stream/lib/cam_stream/multi_camera_publisher
 /home/tasc/AN_WS-1/install/cam_stream/lib/cam_stream/multi_camera_subscriber
+/home/tasc/AN_WS-1/install/cam_stream/lib/cam_stream/sensors_node

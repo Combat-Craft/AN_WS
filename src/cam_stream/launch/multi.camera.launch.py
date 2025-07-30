@@ -26,6 +26,7 @@ def generate_launch_description():
             name='rosapi',
             output='screen',
         ),
+
         # ROS Bridge websocket server
         Node(
             package='rosbridge_server',
@@ -38,5 +39,16 @@ def generate_launch_description():
                 {'call_services_in_new_thread': True},
                 {'send_action_goals_in_new_thread': True}
             ]
-        )
+        ),
+        # Sensors node
+        Node(
+            package='cam_stream',
+            executable='sensors_node',
+            name='sensors_node',
+            output='screen',
+            parameters=[
+                {'port': '/dev/ttyACM0'},
+                {'baud_rate': 9600}
+            ]
+        )   
     ])
