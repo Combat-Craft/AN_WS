@@ -16,7 +16,7 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'port': '/dev/ttyACM0'},
-                {'baud_rate': 9600},
+                {'baud_rate': 57600},
             ]
         ),
         # Add rosapi node
