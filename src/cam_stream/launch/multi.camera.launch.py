@@ -8,7 +8,6 @@ def generate_launch_description():
             executable='multi_camera_publisher',
             name='multi_camera_publisher',
             output='screen',
-            
         ),
         Node(
             package='cam_stream',
@@ -20,18 +19,36 @@ def generate_launch_description():
                 {'baud_rate': 57600},
             ]
         ),
+        # Add rosapi node
         Node(
-            package='cam_stream',
-            executable='multi_cam_gps_aruco',
-            name='multi_cam_gps_aruco',
+            package='rosapi',
+            executable='rosapi_node',
+            name='rosapi',
             output='screen',
         ),
+
+        # ROS Bridge websocket server
+        Node(
+            package='rosbridge_server',
+            executable='rosbridge_websocket.py',
+            name='rosbridge_websocket',
+            output='screen',
+            parameters=[
+                {'port': 9090},
+                {'default_call_service_timeout': 5.0},
+                {'call_services_in_new_thread': True},
+                {'send_action_goals_in_new_thread': True}
+            ]
+        ),
+        # Sensors node
         Node(
             package='cam_stream',
-            executable='distance_tracker',
-            name='distance_tracker',
+            executable='sensors_node',
+            name='sensors_node',
             output='screen',
-            
-        )
+            parameters=[
+                {'port': '/dev/ttyACM0'},
+                {'baud_rate': 9600}
+            ]
+        )   
     ])
-

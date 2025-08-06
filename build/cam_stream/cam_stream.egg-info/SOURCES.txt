@@ -14,6 +14,7 @@ cam_stream/gps_node.py
 cam_stream/multi_cam_gps_aruco.py
 cam_stream/multi_camera_publisher.py
 cam_stream/multi_camera_subscriber.py
+cam_stream/sensors_node.py
 launch/multi.camera.launch.py
 resource/cam_stream
 test/test_copyright.py
