@@ -1,0 +1,29 @@
+[1.866s] Invoking command in '/home/moon/AN_WS/nova_vision': PYTHONPATH=/home/moon/AN_WS/build/nova_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_vision build --build-base /home/moon/AN_WS/build/nova_vision/build install --record /home/moon/AN_WS/build/nova_vision/install.log --single-version-externally-managed install_data
+[2.230s] running egg_info
+[2.231s] writing ../build/nova_vision/nova_vision.egg-info/PKG-INFO
+[2.231s] writing dependency_links to ../build/nova_vision/nova_vision.egg-info/dependency_links.txt
+[2.232s] writing entry points to ../build/nova_vision/nova_vision.egg-info/entry_points.txt
+[2.232s] writing requirements to ../build/nova_vision/nova_vision.egg-info/requires.txt
+[2.232s] writing top-level names to ../build/nova_vision/nova_vision.egg-info/top_level.txt
+[2.234s] reading manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'
+[2.235s] adding license file 'LICENSE'
+[2.236s] writing manifest file '../build/nova_vision/nova_vision.egg-info/SOURCES.txt'
+[2.236s] running build
+[2.236s] running build_py
+[2.237s] running install
+[2.238s] running install_lib
+[2.240s] running install_data
+[2.240s] running install_egg_info
+[2.243s] removing '/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages/nova_vision-0.0.0-py3.10.egg-info' (and everything under it)
+[2.244s] Copying ../build/nova_vision/nova_vision.egg-info to /home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages/nova_vision-0.0.0-py3.10.egg-info
+[2.246s] running install_scripts
+[2.268s] Installing aruco_detect script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision
+[2.268s] Installing camera_publisher script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision
+[2.269s] Installing camera_subscriber script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision
+[2.269s] Installing gps_aruco script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision
+[2.269s] Installing gps_display script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision
+[2.269s] Installing gps_node script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision
+[2.270s] Installing multi_camera_publisher script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision
+[2.270s] Installing object_tracker script to /home/moon/AN_WS/install/nova_vision/lib/nova_vision
+[2.270s] writing list of installed files to '/home/moon/AN_WS/build/nova_vision/install.log'
+[2.292s] Invoked command in '/home/moon/AN_WS/nova_vision' returned '0': PYTHONPATH=/home/moon/AN_WS/build/nova_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/moon/AN_WS/install/nova_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nova_vision build --build-base /home/moon/AN_WS/build/nova_vision/build install --record /home/moon/AN_WS/build/nova_vision/install.log --single-version-externally-managed install_data

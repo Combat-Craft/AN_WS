@@ -17,7 +17,7 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'port': '/dev/ttyACM0'},
-                {'baud_rate': 9600},
+                {'baud_rate': 57600},
             ]
         ),
         Node(
@@ -26,5 +26,12 @@ def generate_launch_description():
             name='multi_cam_gps_aruco',
             output='screen',
         ),
+        Node(
+            package='cam_stream',
+            executable='distance_tracker',
+            name='distance_tracker',
+            output='screen',
+            
+        )
     ])
 

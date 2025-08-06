@@ -1,4 +1,5 @@
 [console_scripts]
+distance_tracker = cam_stream.distance_tracker:main
 gps_node = cam_stream.gps_node:main
 multi_cam_gps_aruco = cam_stream.multi_cam_gps_aruco:main
 multi_camera_publisher = cam_stream.multi_camera_publisher:main

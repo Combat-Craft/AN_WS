@@ -3,20 +3,31 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import NavSatFix
 import serial
+import threading
 
 
 class GPSNode(Node):
     def __init__(self):
         super().__init__('gps_node')
         self.declare_parameter('port', '/dev/ttyACM0')
-        self.declare_parameter('baudrate', 9600)
+        self.declare_parameter('baudrate', 57600)
         self.declare_parameter('simulated_data', True)
 
         self.publisher = self.create_publisher(NavSatFix, 'gps_data', 1)
         self.serial_port = None
+        self.running = True
+
         self.init_serial_connection()
-        self.timer = self.create_timer(1.0, self.publish_data)
-        self.get_logger().info("GPS node started!")
+
+        if self.serial_port:
+            self.read_thread = threading.Thread(target=self.read_serial_loop, daemon=True)
+            self.read_thread.start()
+            self.get_logger().info("Started background serial thread.")
+        elif self.get_parameter('simulated_data').value:
+            self.timer = self.create_timer(1.0, self.publish_simulated)
+            self.get_logger().info("Using simulated GPS data.")
+        else:
+            self.get_logger().error("No serial and no simulated data. Node will not function.")
 
     def init_serial_connection(self):
         port = self.get_parameter('port').value
@@ -26,13 +37,25 @@ class GPSNode(Node):
             self.get_logger().info(f"Connected to {port} at {baudrate} baud")
         except Exception as e:
             self.get_logger().warning(f"Failed to connect to {port}: {e}")
-            if self.get_parameter('simulated_data').value:
-                self.get_logger().info("Using simulated data fallback")
-            else:
-                self.get_logger().error("No GPS connection and no simulation enabled")
+            self.serial_port = None
+
+    def read_serial_loop(self):
+        while self.running and self.serial_port and self.serial_port.is_open:
+            try:
+                raw = self.serial_port.readline().decode('utf-8', errors='ignore').strip()
+                msg = self.parse_nmea(raw)
+                if msg:
+                    self.publisher.publish(msg)
+                    self.get_logger().info(
+                        f"Published: Lat={msg.latitude:.6f}, Lon={msg.longitude:.6f}, "
+                        f"Alt={msg.altitude:.1f}m, Status={msg.status.status}"
+                    )
+            except Exception as e:
+                self.get_logger().error(f"Serial read error: {e}")
+                break
 
     def parse_nmea(self, nmea):
-        if not nmea.startswith('$GNGGA'):
+        if not nmea.startswith('$GNGGA') and not nmea.startswith('$GPGGA'):
             return None
         parts = nmea.split(',')
         if len(parts) < 10 or parts[6] == '0':
@@ -70,28 +93,23 @@ class GPSNode(Node):
         msg.longitude = 2.2945
         msg.altitude = 32.0
         msg.status.status = 1
+        msg.latitude += 0.000001
+        msg.longitude += 0.000001
         return msg
 
-    def publish_data(self):
-        msg = None
+    def publish_simulated(self):
+        msg = self.get_simulated_data()
+        self.publisher.publish(msg)
+        self.get_logger().info(
+            f"Simulated: Lat={msg.latitude:.6f}, Lon={msg.longitude:.6f}, "
+            f"Alt={msg.altitude:.1f}m, Status={msg.status.status}"
+        )
+
+    def destroy_node(self):
+        self.running = False
         if self.serial_port and self.serial_port.is_open:
-            try:
-                if self.serial_port.in_waiting:
-                    raw = self.serial_port.readline().decode('utf-8').strip()
-                    msg = self.parse_nmea(raw)
-            except Exception as e:
-                self.get_logger().error(f"Serial read error: {e}")
-                self.serial_port = None
-
-        if msg is None and self.get_parameter('simulated_data').value:
-            msg = self.get_simulated_data()
-
-        if msg:
-            self.publisher.publish(msg)
-            self.get_logger().info(
-                f"Published: Lat={msg.latitude:.6f}, Lon={msg.longitude:.6f}, "
-                f"Alt={msg.altitude:.1f}m, Status={msg.status.status}"
-            )
+            self.serial_port.close()
+        super().destroy_node()
 
 
 def main(args=None):
@@ -102,11 +120,10 @@ def main(args=None):
     except KeyboardInterrupt:
         pass
     finally:
-        if node.serial_port and node.serial_port.is_open:
-            node.serial_port.close()
         node.destroy_node()
         rclpy.shutdown()
 
 
 if __name__ == '__main__':
     main()
+
