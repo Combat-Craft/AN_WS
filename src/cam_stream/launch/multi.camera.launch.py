@@ -9,16 +9,17 @@ def generate_launch_description():
             name='multi_camera_publisher',
             output='screen',
         ),
-        Node(
-            package='cam_stream',
-            executable='gps_node',
-            name='gps_node',
-            output='screen',
-            parameters=[
-                {'port': '/dev/ttyACM0'},
-                {'baud_rate': 115200},
-            ]
-        ),
+
+        #Node(
+        #    package='cam_stream',
+        #    executable='gps_node',
+        #    name='gps_node',
+        #    output='screen',
+        #    parameters=[
+        #        {'port': '/dev/ttyACM0'},
+        #        {'baud_rate': 115200},
+        #    ]
+        #),
         # Add rosapi node
         Node(
             package='rosapi',

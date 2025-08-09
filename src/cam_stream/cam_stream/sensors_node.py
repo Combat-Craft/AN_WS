@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
-from std_msgs.msg import Float32MultiArray
+from sensor_msgs.msg import NavSatFix, NavSatStatus
 import serial
 
 
@@ -9,80 +10,142 @@ class SensorsNode(Node):
     def __init__(self):
         super().__init__('sensors_node')
 
+        # Declare parameters
         self.declare_parameter('port', '/dev/ttyACM0')
-        self.declare_parameter('baudrate', 9600)
+        self.declare_parameter('baudrate', 115200)
 
-        self.serial = serial.Serial(self.get_parameter('port').value, self.get_parameter('baudrate').value, timeout=1)
+        # Get parameters
+        port = self.get_parameter('port').value
+        baudrate = self.get_parameter('baudrate').value
 
-        self.status_pub = self.create_publisher(String, 'sensors_status', 10)
-        self.data_pub = self.create_publisher(String, 'sensors_table', 10)
-        
+        # Publishers
+        self.status_pub = self.create_publisher(String, 'sensor_status', 10)
+        self.data_pub = self.create_publisher(String, 'sensor_data', 10)
+        self.gps_pub = self.create_publisher(NavSatFix, 'gps_data', 10)
+
+        # Connect to serial
+        try:
+            self.serial = serial.Serial(port, baudrate, timeout=1)
+            self.get_logger().info(f"Connected to {port} at {baudrate} baud.")
+        except Exception as e:
+            self.get_logger().error(f"Failed to connect to serial port {port}: {e}")
+            self.serial = None
+
+        # Timer to poll serial data
         self.timer = self.create_timer(1.0, self.read_serial)
 
+        # Temp storage for multi-line parsing
+        self.current_block = []
 
     def read_serial(self):
-        if self.serial.in_waiting:
-            line = self.serial.readline().decode('utf-8').strip()
+        if not self.serial or not self.serial.is_open:
+            return
 
-            if not line or line.startswith('===') or line.startswith('Time') or 'Warming up' in line:
-                return
+        while self.serial.in_waiting:
+            line = self.serial.readline().decode('utf-8', errors='ignore').strip()
+            if not line:
+                continue
 
-            try:
-                parts = line.split()
+            # Start a new block ONLY when we see the first sensor readings line
+            if line.startswith('--- Sensor Readings ---'):
+                self.current_block = [line]
+                continue
 
+            # If we haven't started a block yet, ignore incoming lines
+            if not self.current_block:
+                continue
 
-                if len(parts) < 6:
-                    self.get_logger().warn(f"Unexpected data format: {line}")
-                    return
+            # Always append lines once we're in a block
+            self.current_block.append(line)
 
+            # End of block: UTC timestamp means we have all the data
+            if line.startswith("UTC Date/Time:"):
+                self.parse_block(self.current_block)
+                self.current_block = []  # Reset for next cycle
 
-                # First 5 are numeric, the rest is status
-                time_sec = int(parts[0])
-                cpm = int(parts[1])
-                usvh = float(parts[2])
-                o3_ppm = float(parts[3])
-                h2_ppm = float(parts[4])
-                status = ' '.join(parts[5:])  #  the rest as status string
+    def parse_block(self, lines):
+        ozone_ppm = None
+        hydrogen_ppm = None
+        cpm = None
+        usvh = None
+        gps_lat = None
+        gps_lon = None
+        utc_time = None
+        gps_valid = False
 
+        gps_line_raw = None
 
-                
-                msg = String()
-                msg.data = f"t={time_sec}s | {status}"
-                self.status_pub.publish(msg)
+        for line in lines:
+            if line.startswith("Ozone:"):
+                ozone_ppm = float(line.split(":")[1].replace("ppm", "").strip())
+            elif line.startswith("Hydrogen:"):
+                hydrogen_ppm = float(line.split(":")[1].replace("ppm", "").strip())
+            elif line.startswith("Radiation:"):
+                parts = line.replace("Radiation:", "").split("|")
+                if len(parts) == 2:
+                    cpm = int(parts[0].replace("CPM", "").strip())
+                    usvh = float(parts[1].replace("µSv/h", "").strip())
+            elif line.startswith("--- GPS ---(Lat/Long)"):
+                gps_line_raw = line
+                gps_parts = line.split(";")
+                if len(gps_parts) >= 3 and "invalid" not in gps_parts[1]:
+                    try:
+                        gps_lat = float(gps_parts[1])
+                        gps_lon = float(gps_parts[2])
+                        gps_valid = True
+                    except ValueError:
+                        gps_valid = False
+            elif line.startswith("UTC Date/Time:"):
+                utc_time = line.replace("UTC Date/Time:", "").strip()
 
+        # Publish sensor status
+        if ozone_ppm is not None or hydrogen_ppm is not None or cpm is not None:
+            status_msg = String()
+            status_msg.data = f"O₃={ozone_ppm} ppm | H₂={hydrogen_ppm} ppm | CPM={cpm} | uSv/h={usvh}"
+            self.status_pub.publish(status_msg)
+            self.get_logger().info(f"Published status: {status_msg.data}")
 
-                
-                self.get_logger().info(f"Published status: {msg.data}")
+            table_msg = String()
+            table_msg.data = (
+                f"Sensor Readings:\n"
+                f"  Ozone:     {ozone_ppm} ppm\n"
+                f"  Hydrogen:  {hydrogen_ppm} ppm\n"
+                f"  CPM:       {cpm}\n"
+                f"  uSv/h:     {usvh}\n"
+                f"  GPS:       {gps_line_raw}\n"
+                f"  UTC Time:  {utc_time}"
+            )
+            self.data_pub.publish(table_msg)
+            self.get_logger().info(f"Published data:\n{table_msg.data}")
 
+        # Publish GPS if valid
+        if gps_valid:
+            gps_msg = NavSatFix()
+            gps_msg.header.stamp = self.get_clock().now().to_msg()
+            gps_msg.header.frame_id = 'gps'
+            gps_msg.latitude = gps_lat
+            gps_msg.longitude = gps_lon
+            gps_msg.altitude = 0.0  # Not provided
+            gps_msg.status.status = NavSatStatus.STATUS_FIX
+            self.gps_pub.publish(gps_msg)
+            self.get_logger().info(f"Published GPS: Lat={gps_lat}, Lon={gps_lon}")
 
-                # Publish numeric values
-                #data_msg = Float32MultiArray()
-                #data_msg.data = [float(time_sec), float(cpm), usvh, o3_ppm, h2_ppm]
-                #self.data_pub.publish(data_msg)
-                table_msg = String()
-                table_msg.data = (
-                    f"Sensor Readings:\n"
-                    f"  Time:     {time_sec} s\n"
-                    f"  CPM:      {cpm}\n"
-                    f"  uSv/h:    {usvh:.3f}\n"
-                    f"  O₃ (ppm): {o3_ppm:.3f}\n"
-                    f"  H₂ (ppm): {h2_ppm:.3f}"
-                )
-                self.data_pub.publish(table_msg)
-
-                self.get_logger().info(f"Published data: {table_msg.data}")
-
-
-            except Exception as e:
-                self.get_logger().error(f"Error parsing line: {line} -> {e}")
+    def destroy_node(self):
+        if self.serial and self.serial.is_open:
+            self.serial.close()
+        super().destroy_node()
 
 
 def main(args=None):
     rclpy.init(args=args)
     node = SensorsNode()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':
