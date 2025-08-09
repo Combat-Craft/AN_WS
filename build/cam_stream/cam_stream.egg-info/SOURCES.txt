@@ -11,6 +11,7 @@ setup.py
 cam_stream/__init__.py
 cam_stream/distance_tracker.py
 cam_stream/gps_node.py
+cam_stream/heading.py
 cam_stream/multi_cam_gps_aruco.py
 cam_stream/multi_camera_publisher.py
 cam_stream/multi_camera_subscriber.py

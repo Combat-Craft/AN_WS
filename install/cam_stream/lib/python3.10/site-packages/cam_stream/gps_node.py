@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import NavSatFix
+from sensor_msgs.msg import NavSatFix, NavSatStatus
 import serial
 import threading
 
@@ -10,9 +10,10 @@ class GPSNode(Node):
     def __init__(self):
         super().__init__('gps_node')
         self.declare_parameter('port', '/dev/ttyACM0')
-        self.declare_parameter('baudrate', 57600)
-        self.declare_parameter('simulated_data', True)
-
+        self.declare_parameter('baudrate', 115200)
+        self.declare_parameter('simulated_data', False)
+        self.sim_lat = 54.8584
+        self.sim_lon = -83.85768
         self.publisher = self.create_publisher(NavSatFix, 'gps_data', 1)
         self.serial_port = None
         self.running = True
@@ -43,6 +44,7 @@ class GPSNode(Node):
         while self.running and self.serial_port and self.serial_port.is_open:
             try:
                 raw = self.serial_port.readline().decode('utf-8', errors='ignore').strip()
+                
                 msg = self.parse_nmea(raw)
                 if msg:
                     self.publisher.publish(msg)
@@ -55,10 +57,13 @@ class GPSNode(Node):
                 break
 
     def parse_nmea(self, nmea):
-        if not nmea.startswith('$GNGGA') and not nmea.startswith('$GPGGA'):
+        #self.get_logger().info(nmea)
+
+        if not nmea.startswith('--- GPS ---(Lat/Long)'):
             return None
-        parts = nmea.split(',')
-        if len(parts) < 10 or parts[6] == '0':
+        parts = nmea.split(';')
+        if parts[1] == 'Location: (invalid or not yet fixed)':
+            self.get_logger().warn("no fix")
             return None
 
         msg = NavSatFix()
@@ -66,6 +71,7 @@ class GPSNode(Node):
         msg.header.frame_id = 'gps'
 
         try:
+            '''
             lat_deg = float(parts[2][:2])
             lat_min = float(parts[2][2:])
             msg.latitude = lat_deg + lat_min / 60.0
@@ -79,29 +85,41 @@ class GPSNode(Node):
                 msg.longitude *= -1
 
             msg.altitude = float(parts[9]) if parts[9] else 0.0
-            msg.status.status = int(parts[6])
+            return msg
+            '''
+            lat = float(parts[1])
+            lon = float(parts[2])
+
+
+            msg.latitude = lat
+            msg.longitude = lon
+            self.get_logger().info(parts[1])
+            self.get_logger().info(parts[2])
+            msg.altitude = 0.0  # Unknown unless added later
+            msg.status.status = NavSatStatus.STATUS_FIX  # Use proper status constant
             return msg
         except (ValueError, IndexError) as e:
             self.get_logger().error(f"Parse error: {e}")
             return None
 
     def get_simulated_data(self):
+        self.sim_lat += 0.0001  # Simulate forward movement
+        self.sim_lon += 0.00001 
+
         msg = NavSatFix()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = 'gps'
-        msg.latitude = 48.8584
-        msg.longitude = 2.2945
+        msg.latitude = self.sim_lat
+        msg.longitude = self.sim_lon
         msg.altitude = 32.0
         msg.status.status = 1
-        msg.latitude += 0.000001
-        msg.longitude += 0.000001
         return msg
 
     def publish_simulated(self):
         msg = self.get_simulated_data()
         self.publisher.publish(msg)
         self.get_logger().info(
-            f"Simulated: Lat={msg.latitude:.6f}, Lon={msg.longitude:.6f}, "
+            f"Simulated: Lat={msg.latitude:.8f}, Lon={msg.longitude:.8f}, "
             f"Alt={msg.altitude:.1f}m, Status={msg.status.status}"
         )
 

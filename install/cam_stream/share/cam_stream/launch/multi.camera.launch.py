@@ -16,7 +16,7 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'port': '/dev/ttyACM0'},
-                {'baud_rate': 57600},
+                {'baud_rate': 115200},
             ]
         ),
         # Add rosapi node
@@ -48,7 +48,21 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'port': '/dev/ttyACM0'},
-                {'baud_rate': 9600}
+                {'baud_rate': 115200}
             ]
-        )   
+        ),   
+
+        Node(
+            package='cam_stream',
+            executable='distance_tracker',
+            name='distance_tracker',
+            output='screen',
+        ),
+        #
+        Node(
+            package='cam_stream',
+            executable='heading',
+            name='heading',
+            output='screen',
+        ),
     ])
