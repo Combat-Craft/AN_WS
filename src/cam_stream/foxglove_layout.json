@@ -1,0 +1,237 @@
+{
+  "configById": {
+    "Publish!2sf0oak": {
+      "buttonText": "Send NAV",
+      "buttonTooltip": "",
+      "advancedView": true,
+      "value": "{\n  \"latitude\": 54.869,\n  \"longitude\": -83.8558,\n  \"altitude\": 0\n}",
+      "topicName": "heading_input",
+      "datatype": "sensor_msgs/NavSatFix",
+      "buttonColor": "#120088"
+    },
+    "Publish!1mbdp7t": {
+      "buttonText": "Publish",
+      "buttonTooltip": "",
+      "advancedView": true,
+      "value": "{}",
+      "topicName": "/reset_distance",
+      "datatype": "std_msgs/Empty",
+      "buttonColor": "#ff8282"
+    },
+    "RawMessages!4d8g0de": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/moved_distance",
+      "fontSize": 12
+    },
+    "RawMessages!3ewnli9": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/heading_direction",
+      "fontSize": 12
+    },
+    "Image!2z9s6qm": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/cam1/h264"
+      }
+    },
+    "RawMessages!2ye0olp": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/cam1/h264",
+      "fontSize": 12
+    },
+    "RawMessages!on8cea": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/cam1/h264/markers",
+      "fontSize": 12
+    },
+    "RawMessages!1ji014u": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/cam0/h264/markers",
+      "fontSize": 12
+    },
+    "Image!3s9vhqv": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/cam0/h264"
+      }
+    },
+    "RawMessages!4govgfb": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/cam0/h264",
+      "fontSize": 12
+    },
+    "RawMessages!z0vdkr": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/gps_data",
+      "fontSize": 12,
+      "expansion": {
+        "header": "e",
+        "stamp~header": "c",
+        "status": "e",
+        "position_covariance": "e"
+      }
+    },
+    "RawMessages!2b1ueal": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/sensors_table",
+      "fontSize": 12
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "drawerConfig": {
+    "tracks": []
+  },
+  "layout": {
+    "direction": "row",
+    "first": {
+      "first": {
+        "first": "Publish!2sf0oak",
+        "second": "Publish!1mbdp7t",
+        "direction": "row"
+      },
+      "second": {
+        "first": {
+          "first": "RawMessages!4d8g0de",
+          "second": "RawMessages!3ewnli9",
+          "direction": "row"
+        },
+        "second": "RawMessages!2b1ueal",
+        "direction": "column"
+      },
+      "direction": "column",
+      "splitPercentage": 43.29829172141918
+    },
+    "second": {
+      "direction": "row",
+      "first": {
+        "first": "Image!2z9s6qm",
+        "second": {
+          "first": "RawMessages!2ye0olp",
+          "second": {
+            "first": "RawMessages!on8cea",
+            "second": "RawMessages!1ji014u",
+            "direction": "column"
+          },
+          "direction": "row"
+        },
+        "direction": "column",
+        "splitPercentage": 56.85791986556218
+      },
+      "second": {
+        "first": "Image!3s9vhqv",
+        "second": {
+          "first": "RawMessages!4govgfb",
+          "second": "RawMessages!z0vdkr",
+          "direction": "row"
+        },
+        "direction": "column",
+        "splitPercentage": 57.491675915649274
+      }
+    },
+    "splitPercentage": 34.087956949341255
+  }
+}
